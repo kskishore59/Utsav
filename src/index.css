@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Initial state - hidden scrollbar */
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(25, 73, 75);
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+/* Show scrollbar only when scrolling */
+body:hover::-webkit-scrollbar,
+body:active::-webkit-scrollbar,
+body:focus::-webkit-scrollbar {
+  opacity: 1;
+}
+
+/* Add this JavaScript to handle scroll events */
