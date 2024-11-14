@@ -82,7 +82,7 @@ export default function Home() {
                 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
               >
                 <span className="block">Elevate your</span>
-                <span className="block text-blue-400 bg-clip-text text-transparent">
+                <span className="block text-blue-400 bg-clip-text">
                   Events with us
                 </span>
               </motion.h1>

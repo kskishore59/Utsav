@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src="../../public/utsav-logo-1.jpeg"
+                src="/utsav-logo-1.jpeg"
                 alt="logo"
                 style={{ height: "3rem", width: "9rem" }}
               />
