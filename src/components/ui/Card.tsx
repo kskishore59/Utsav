@@ -59,7 +59,7 @@ export function Card({
           )}
           {price && (
             <p className="mt-1.5 text-sm font-semibold text-indigo-600">
-              ${price}
+              ₹{price}
             </p>
           )}
         </div>

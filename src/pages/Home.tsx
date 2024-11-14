@@ -17,18 +17,38 @@ import {
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import ContactForm from "../components/ContactForm";
 
 // Create a reusable scroll animation component
 function ScrollAnimation({ children }: { children: React.ReactNode }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, {
+    once: true,
+    threshold: 0.2, // Triggers when 20% of element is in view
+    margin: "0px 0px -100px 0px", // Negative margin to trigger earlier
+  });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 20 }} // Reduced initial movement
+      animate={
+        isInView
+          ? {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1], // Custom easing
+                staggerChildren: 0.1, // If you have multiple children
+              },
+            }
+          : {
+              opacity: 0,
+              y: 20,
+            }
+      }
+      className="will-change-transform" // Performance optimization
     >
       {children}
     </motion.div>
@@ -194,82 +214,8 @@ export default function Home() {
       </div>
 
       {/* View by Events Section */}
-      <ScrollAnimation>
-        <div className="py-12">
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              View by Events
-            </h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 p-4">
-              <CategoryCard
-                icon={<BellRingIcon className="h-8 w-8" />}
-                title="Weddings"
-                description="Complete wedding setup and decorations"
-                image="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80"
-                link="/events/wedding"
-              />
-              <CategoryCard
-                icon={<Cake className="h-8 w-8" />}
-                title="Birthday Parties"
-                description="Make your birthday memorable"
-                image="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80"
-                link="/events/birthday"
-              />
-              <CategoryCard
-                icon={<Utensils className="h-8 w-8" />}
-                title="Corporate Events"
-                description="Professional event solutions"
-                image="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80"
-                link="/events/corporate"
-              />
-              <CategoryCard
-                icon={<Mic className="h-8 w-8" />}
-                title="Concerts"
-                description="Stage and sound setup for performances"
-                image="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=80"
-                link="/events/concert"
-              />
-            </div>
-          </div>
 
-          {/* View by Categories Section */}
-          <div>
-            <h2 className="text-3xl font-bold text-center mb-12">
-              View by Categories
-            </h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 p-4">
-              <CategoryCard
-                icon={<PartyPopper className="h-8 w-8" />}
-                title="Event Decor"
-                description="Stunning decorations for any occasion"
-                image="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80"
-                link="/category/decor"
-              />
-              <CategoryCard
-                icon={<Music className="h-8 w-8" />}
-                title="Sound Systems"
-                description="Professional audio equipment"
-                image="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&q=80"
-                link="/category/sound"
-              />
-              <CategoryCard
-                icon={<Camera className="h-8 w-8" />}
-                title="Lighting"
-                description="Create the perfect ambiance"
-                image="https://images.unsplash.com/photo-1504509546545-e000b4a62425?auto=format&fit=crop&q=80"
-                link="/category/lighting"
-              />
-              <CategoryCard
-                icon={<Gift className="h-8 w-8" />}
-                title="Party Supplies"
-                description="Everything you need for your event"
-                image="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80"
-                link="/category/supplies"
-              />
-            </div>
-          </div>
-        </div>
-      </ScrollAnimation>
+      {/* <ContactForm /> */}
     </div>
   );
 }
