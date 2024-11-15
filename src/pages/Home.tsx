@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Music,
@@ -14,10 +14,16 @@ import {
   BellRingIcon,
   ArrowRight,
   PhoneCallIcon,
+  Headphones,
+  Clock,
+  Shield,
+  CheckCircle,
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import ContactForm from "../components/ContactForm";
+import LazyImage from "../components/LazyImage";
+import FeedbackButton from "../components/FeedbackButton";
 
 // Create a reusable scroll animation component
 function ScrollAnimation({ children }: { children: React.ReactNode }) {
@@ -64,7 +70,7 @@ export default function Home() {
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="absolute inset-0"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80" />
@@ -184,41 +190,111 @@ export default function Home() {
       </ScrollAnimation>
 
       {/* Features */}
-      <div className="bg-gray-50 py-16">
-        <ScrollAnimation>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900">
-                Why Choose Utsav
-              </h2>
-            </div>
-            <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <Feature
-                icon={<Trophy className="h-6 w-6" />}
-                title="Premium Equipment"
-                description="Top-quality, well-maintained equipment from leading brands"
-              />
-              <Feature
-                icon={<PartyPopper className="h-6 w-6" />}
-                title="Event Support"
-                description="Technical support and setup assistance available"
-              />
-              <Feature
-                icon={<Music className="h-6 w-6" />}
-                title="Flexible Rental"
-                description="Daily, weekly, and event-based rental options"
-              />
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Why Choose Utsav?
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+              India's premier event equipment rental platform, bringing
+              professional-grade equipment and seamless service to make your
+              celebrations extraordinary.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <Feature
+              icon={<Trophy className="h-6 w-6" />}
+              title="Premium Equipment Collection"
+              description="Access to high-end sound systems, professional lighting, and premium event gear from industry-leading brands. All equipment is meticulously maintained and tested before each rental."
+            />
+            <Feature
+              icon={<PartyPopper className="h-6 w-6" />}
+              title="Complete Event Solutions"
+              description="From traditional ceremonies to modern celebrations, we provide comprehensive technical support, professional setup, and on-site assistance to ensure your event runs flawlessly."
+            />
+            <Feature
+              icon={<Music className="h-6 w-6" />}
+              title="Customizable Packages"
+              description="Flexible rental options tailored to your needs - whether it's a small gathering or a grand celebration. Choose from hourly, daily, or event-based packages."
+            />
+            <Feature
+              icon={<Headphones className="h-6 w-6" />}
+              title="Expert Consultation"
+              description="Our experienced team provides personalized recommendations to help you choose the perfect equipment setup for your event type, venue size, and budget."
+            />
+            <Feature
+              icon={<Clock className="h-6 w-6" />}
+              title="Reliable Service"
+              description="Punctual delivery, professional installation, and prompt support throughout your event. We ensure everything works perfectly so you can focus on your celebration."
+            />
+            <Feature
+              icon={<Shield className="h-6 w-6" />}
+              title="Quality Assured"
+              description="Every piece of equipment is covered by insurance and undergoes rigorous quality checks. We provide backup equipment for critical components ensuring uninterrupted events."
+            />
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Your One-Stop Event Equipment Solution
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+                Utsav caters to all types of events across India, from intimate
+                family gatherings to large-scale corporate events. Our platform
+                simplifies the rental process with:
+              </p>
+              <ul className="flex-col items-center justify-center text-center max-w-2xl mx-auto space-y-4 text-gray-600">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                  <span>
+                    Easy online booking system with real-time availability
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                  <span>Transparent pricing with no hidden charges</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                  <span>Customer support for immediate assistance</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </ScrollAnimation>
-      </div>
+        </div>
+      </section>
 
       {/* View by Events Section */}
 
       {/* <ContactForm /> */}
+      <FeedbackButton />
     </div>
   );
 }
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: (isMobile: boolean) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: isMobile ? 0.3 : 0.5,
+      ease: "easeOut",
+    },
+  }),
+  hover: (isMobile: boolean) => ({
+    scale: isMobile ? 1 : 1.02,
+    transition: {
+      duration: 0.2,
+    },
+  }),
+};
 
 function CategoryCard({
   icon,
@@ -234,26 +310,40 @@ function CategoryCard({
   link: string;
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const isInView = useInView(ref, {
+    once: true,
+    threshold: 0.2,
+    margin: "0px 0px -50px 0px",
+  });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.98 }}
-      className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl"
+      variants={cardVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      whileHover="hover"
+      custom={isMobile}
+      className="group relative overflow-hidden rounded-xl bg-white shadow-md hover:shadow-lg transition-all will-change-transform"
     >
       <Link to={link} className="block">
         <div className="relative h-48 overflow-hidden">
-          <motion.img
+          <LazyImage
             src={image}
             alt={title}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-            initial={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
