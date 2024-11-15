@@ -94,5 +94,6 @@ export const PRODUCTS: Product[] = [
     ],
     description: "Complete decoration set for parties and events",
     available: true,
+    // usedForEvents: [wedding, reception, haldi],
   },
 ];

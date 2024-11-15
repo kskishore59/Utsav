@@ -16,7 +16,8 @@ import Categories from "./pages/Categories";
 import FAQ from "./pages/FAQ";
 import { initScrollbarBehavior } from "./utils/scrollbar";
 
-function App() {
+// Separate the main app content into a new component
+function AppContent() {
   const location = useLocation();
   useEffect(() => {
     initScrollbarBehavior();
@@ -69,6 +70,15 @@ function App() {
         <Footer />
       </div>
     </AuthProvider>
+  );
+}
+
+// Main App component with BrowserRouter
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   );
 }
 
