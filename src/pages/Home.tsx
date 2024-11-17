@@ -185,6 +185,13 @@ export default function Home() {
               image="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80"
               link="/category/decor"
             />
+            <CategoryCard
+              icon={<PartyPopper className="h-8 w-8" />}
+              title="View All Categories"
+              description=""
+              image=""
+              link="/categories"
+            />
           </div>
         </div>
       </ScrollAnimation>
@@ -339,7 +346,7 @@ function CategoryCard({
       className="group relative overflow-hidden rounded-xl bg-white shadow-md hover:shadow-lg transition-all will-change-transform"
     >
       <Link to={link} className="block">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-48 w-full overflow-hidden">
           <LazyImage
             src={image}
             alt={title}

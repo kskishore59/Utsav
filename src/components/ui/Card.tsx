@@ -6,8 +6,9 @@ interface CardProps {
   href: string;
   image: string;
   title: string;
-  description?: string;
-  price?: number;
+  description: string;
+  price: number;
+  onClick?: () => void;
   className?: string;
 }
 
@@ -17,6 +18,7 @@ export function Card({
   title,
   description,
   price,
+  onClick,
   className = "",
 }: CardProps) {
   const [imageLoading, setImageLoading] = useState(true);

@@ -1,10 +1,9 @@
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, SlidersHorizontal } from "lucide-react";
-import { Section } from "../components/ui/Section";
-import { Dropdown } from "../components/ui/Dropdown";
-import { Card } from "../components/ui/Card";
 import { Button } from "../components/ui/Button";
+import { Card } from "../components/ui/Card";
+import { Dropdown } from "../components/ui/Dropdown";
+import { Section } from "../components/ui/Section";
 import { PRODUCTS } from "../products";
 
 // Define interfaces
@@ -25,7 +24,7 @@ interface ActiveFilters {
 
 // Mock data - replace with your actual data
 
-export default function Categories() {
+export default function AllProducts() {
   const navigate = useNavigate();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [activeFilters, setActiveFilters] = useState<ActiveFilters>({

@@ -22,7 +22,7 @@ export function Carousel({ images }: CarouselProps) {
   };
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
+    <div className="relative w-full h-108 max-w-3xl mx-auto">
       <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-lg">
         <AnimatePresence mode="wait">
           <motion.img

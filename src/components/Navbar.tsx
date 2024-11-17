@@ -1,18 +1,9 @@
+import { HelpCircle, Menu, Package, Search, X } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  Music,
-  Lightbulb,
-  Package,
-  Menu,
-  Search,
-  X,
-  LampCeiling,
-  Flower,
-  HelpCircle,
-} from "lucide-react";
 // import { useStore } from "../store";
 import { PRODUCTS } from "../products";
+import { debounce } from "lodash";
 
 export default function Navbar() {
   // const cart = useStore((state) => state.cart);
@@ -20,14 +11,27 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
+  const [searchResults, setSearchResults] = useState<Product[]>([]);
 
-  const getSuggestions = (query: string) => {
-    if (!query) return [];
-    return PRODUCTS.filter(
-      (product) =>
-        product.name.toLowerCase().includes(query.toLowerCase()) ||
-        product.description.toLowerCase().includes(query.toLowerCase())
-    ).slice(0, 5);
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    if (query.trim() === "") {
+      setSearchResults([]);
+      return;
+    }
+
+    const filtered = PRODUCTS.filter((product) => {
+      const searchTerm = query.toLowerCase();
+      return (
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.category.toLowerCase().includes(searchTerm) ||
+        product.description.toLowerCase().includes(searchTerm)
+      );
+    }).slice(0, 5);
+
+    setSearchResults(filtered);
   };
 
   const handleNavClick = () => {
@@ -65,49 +69,52 @@ export default function Navbar() {
                   type="text"
                   placeholder="Search products..."
                   value={searchQuery}
-                  onChange={(e) => {
-                    setSearchQuery(e.target.value);
-                    setShowSuggestions(true);
-                  }}
-                  onFocus={() => setShowSuggestions(true)}
+                  onChange={handleSearch}
                   className="pl-9 pr-4 py-1.5 border border-gray-300 rounded-full w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
                 />
               </div>
 
-              {showSuggestions && searchQuery && (
-                <div className="absolute z-50 w-full mt-1 bg-white rounded-md shadow-lg border border-gray-200">
-                  {getSuggestions(searchQuery).map((product) => (
-                    <div
+              {searchResults.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+                  {searchResults.map((product) => (
+                    <Link
                       key={product.id}
-                      className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      to={`/product/${product.id}`}
+                      className="block px-4 py-3 hover:bg-gray-50 transition-colors duration-200"
                       onClick={() => {
-                        navigate(`/product/${product.id}`);
                         setSearchQuery("");
-                        setShowSuggestions(false);
+                        setSearchResults([]);
                       }}
                     >
-                      <div className="flex items-center space-x-3">
+                      <div className="flex items-center space-x-4">
                         <img
                           src={product.image[0]}
                           alt={product.name}
-                          className="w-8 h-8 object-cover rounded"
+                          className="w-12 h-12 object-cover rounded"
                         />
                         <div>
-                          <div className="font-medium text-sm">
+                          <h3 className="text-sm font-medium text-gray-900">
                             {product.name}
-                          </div>
-                          <div className="text-xs text-gray-500">
-                            ${product.price}
-                          </div>
+                          </h3>
+                          <p className="text-sm text-gray-500">
+                            {product.category} - {product.subCategory}
+                          </p>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
             <Link
               to="/categories"
+              className="flex items-center space-x-1 text-gray-600 hover:text-indigo-600"
+            >
+              <Package className="h-5 w-5" />
+              <span>All Categories</span>
+            </Link>
+            <Link
+              to="/all-products"
               className="flex items-center space-x-1 text-gray-600 hover:text-indigo-600"
             >
               <Package className="h-5 w-5" />
@@ -181,23 +188,20 @@ export default function Navbar() {
                   type="text"
                   placeholder="Search products..."
                   value={searchQuery}
-                  onChange={(e) => {
-                    setSearchQuery(e.target.value);
-                    setShowSuggestions(true);
-                  }}
+                  onChange={handleSearch}
                   className="pl-9 pr-4 py-1.5 border border-gray-300 rounded-full w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
                 />
               </div>
-              {showSuggestions && searchQuery && (
+              {searchResults.length > 0 && (
                 <div className="mt-1 bg-white rounded-md shadow-lg border border-gray-200">
-                  {getSuggestions(searchQuery).map((product) => (
+                  {searchResults.map((product) => (
                     <div
                       key={product.id}
                       className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
                       onClick={() => {
                         navigate(`/product/${product.id}`);
                         setSearchQuery("");
-                        setShowSuggestions(false);
+                        setSearchResults([]);
                         setIsOpen(false);
                       }}
                     >
@@ -226,6 +230,13 @@ export default function Navbar() {
               className="block px-3 py-2 text-gray-600 transition-colors duration-200 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg"
               onClick={handleNavClick}
             >
+              All Categories
+            </Link>
+            <Link
+              to="/all-products"
+              className="block px-3 py-2 text-gray-600 transition-colors duration-200 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg"
+              onClick={handleNavClick}
+            >
               All Products
             </Link>
             <Link
@@ -246,12 +257,6 @@ export default function Navbar() {
               </svg>
               Chat with us
             </a>
-            {/* <Link to="/orders" className="block px-3 py-2 text-gray-600">
-              Orders
-            </Link> */}
-            {/* <Link to="/cart" className="block px-3 py-2 text-gray-600">
-              Cart ({cart.length})
-            </Link> */}
           </div>
         </div>
       )}
