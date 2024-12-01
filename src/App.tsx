@@ -1,7 +1,7 @@
 import { lazy, memo, Suspense, useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import AdminRoute from "./components/AdminRoute";
-import ErrorBoundary from "./components/ErrorBoundary";
+
 import { LoadingScreen } from "./components/LoadingScreen";
 import { PerformanceProvider } from "./context/PerformanceContext";
 import { AuthProvider } from "./hooks/useAuth";
@@ -14,6 +14,7 @@ import Orders from "./pages/Orders";
 import { initScrollbarBehavior } from "./utils/scrollbar";
 import AllCategories from "./pages/AllCategories";
 import AllProducts from "./pages/Categories";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));

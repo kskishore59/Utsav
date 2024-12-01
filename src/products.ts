@@ -4,7 +4,7 @@ export const PRODUCTS: Product[] = [
   // SOUND CATEGORY - DJ SETUPS
   {
     id: "sound-dj-1",
-    name: "DJ Setup Single Pin",
+    name: "DJ Setup Single Bin",
     category: "sound",
     subCategory: "DJ's Setup",
     price: 15000,
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "sound-dj-2",
-    name: "DJ Setup Double Pin",
+    name: "DJ Setup Double Bin",
     category: "sound",
     subCategory: "DJ's Setup",
     price: 25000,
@@ -180,7 +180,7 @@ export const PRODUCTS: Product[] = [
     name: "Premium Wedding Car",
     category: "transportation",
     subCategory: "Cars",
-    price: 8000,
+    price: 10000,
     setupCharges: 1000, // for decoration
     deliveryCharges: 1500,
     rentalDuration: {
@@ -192,19 +192,19 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+      "https://i.postimg.cc/hG3Fg9tG/wedding-car-one.jpg",
+      "https://i.postimg.cc/hG3Fg9tG/wedding-car-one.jpg",
     ],
     description:
       "Luxury car service with professional chauffeur and premium decoration.",
     specifications: [
-      "Premium sedan (Mercedes/BMW/Audi)",
+      "Premium sedan (Mercedes/BMW/Audi/Jaguar)",
       "Professional uniformed chauffeur",
       "Basic floral decoration included",
-      "Red carpet service",
+      // "Red carpet service",
       "Fully air-conditioned",
       "Complimentary water bottles",
-      "Fuel included for standard duration",
+      // "Fuel included for standard duration",
       "Insurance coverage included",
       "Backup vehicle on standby",
     ],
@@ -264,8 +264,9 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80",
+      "https://i.postimg.cc/wTZjWVFV/LED-dance-floor-3.jpg",
+      "https://i.postimg.cc/QMrxDd2K/led-dance-floor-1.jpg",
+      "https://i.postimg.cc/qvKMW35d/LED-dance-floor-2.jpg",
     ],
     description:
       "Interactive LED dance floor with multiple patterns and color combinations.",
@@ -382,8 +383,8 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+      "https://i.postimg.cc/zvfGQ29d/Nadaswaram-Group.jpg",
+      "https://i.postimg.cc/j28LdYH0/Nadaswaram-Group-2.jpg",
     ],
     description: "Traditional Nadaswaram group for auspicious ceremonies.",
     specifications: [
@@ -691,8 +692,9 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+      "https://i.postimg.cc/66RZStdQ/Basic-in-house-Mehndi-backdrop-decor.jpg",
+      "https://i.postimg.cc/4y4YgxhQ/def82651-f974-40f3-b528-9f50e0a2207c.jpg",
+      "https://i.postimg.cc/44wK1VrL/c8f80ca3-8587-433c-8925-e6f5c16f1123.jpg",
     ],
     description:
       "Complete Haldi ceremony decoration with traditional elements.",
@@ -726,8 +728,8 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
     ],
     description: "Premium reception stage and venue decoration package.",
     specifications: [

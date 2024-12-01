@@ -9,6 +9,7 @@ body::-webkit-scrollbar {
   background: transparent;
   opacity: 0;
   transition: opacity 0.3s;
+  font-family: inter;
 }
 
 body::-webkit-scrollbar-track {

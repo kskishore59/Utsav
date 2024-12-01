@@ -48,7 +48,10 @@ function ProductDetail() {
             {product.name}
           </h1>
           <p className="text-2xl font-semibold text-indigo-600">
-            ₹{product.price.toLocaleString("en-IN")}
+            <span className="text-lg font-500 text-indigo-600">
+              Starting From{" "}
+            </span>
+            <br />₹{product.price.toLocaleString("en-IN")}
           </p>
 
           <div className="prose max-w-none">

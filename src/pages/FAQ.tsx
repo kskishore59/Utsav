@@ -6,51 +6,105 @@ import { AccordionItem } from "../components/ui/Accordion";
 const FAQData = [
   {
     id: 1,
-    question: "What equipment do you offer for events?",
+    question: "Who are we, and what do we do?",
     answer:
-      "We offer a wide range of event equipment including sound systems, lighting equipment, stage setups, decorative elements, and more. Our inventory is regularly updated to ensure we provide the latest technology and trends in event production.",
+      "We are an event rental platform connecting you with the best vendors for all your event needs. From lighting and sound to complete packages, we simplify the process of renting high-quality materials for any type of event, all in one place.",
   },
   {
     id: 2,
-    question: "How does the rental process work?",
+    question: "What types of events do you cater to?",
     answer:
-      "The rental process is simple: Browse our catalog, select your items, choose your rental dates, and proceed to checkout. We'll confirm your order and arrange delivery or pickup. Our team is available to assist you throughout the process.",
+      "We cater to all types of events, including weddings, corporate functions, birthday parties, cultural events, and more. Whether it’s a small gathering or a grand celebration, we have packages to suit every occasion.",
   },
   {
     id: 3,
-    question: "Do you provide setup and installation services?",
+    question: "Why choose us?",
     answer:
-      "Yes, we offer professional setup and installation services for all our equipment. Our experienced technicians ensure everything is properly installed and functioning before your event.",
+      "We simplify your event planning process by offering: Verified and reliable vendors, affordable pricing, a hassle-free booking experience, and a range of customizable packages tailored to your needs.",
   },
   {
     id: 4,
-    question: "What is your cancellation policy?",
+    question: "What kind of packages do you offer?",
     answer:
-      "Orders can be cancelled up to 48 hours before the rental date for a full refund. Cancellations within 48 hours may be subject to a cancellation fee. Please contact our customer service for specific details.",
+      "Our packages are designed for different types of events and include essentials like lighting, sound systems, stage setups, and decorations. Each package is customizable based on your requirements.",
   },
   {
     id: 5,
-    question: "Do you offer delivery services?",
+    question: "Can I rent individual items instead of a package?",
     answer:
-      "Yes, we provide delivery and pickup services within our service area. Delivery fees vary based on location and equipment size. We can provide a quote during the booking process.",
+      "Currently, we are focusing on package-based rentals to ensure a seamless and cost-effective experience. However, stay tuned as we expand our services!",
   },
   {
     id: 6,
-    question: "What happens if equipment malfunctions during my event?",
+    question: "How can I find out the pricing for the packages?",
     answer:
-      "We provide 24/7 emergency support for all rentals. If any equipment malfunctions, our technical team will respond promptly to resolve the issue or provide replacement equipment.",
+      "To get the best prices, simply click the 'Request Quote' button on the package you're interested in. You’ll be redirected to WhatsApp, where our team will assist you with pricing and customization options.",
   },
   {
     id: 7,
-    question: "Do you require a deposit?",
+    question: "How does the booking process work?",
     answer:
-      "Yes, we require a security deposit for most rentals. The deposit amount varies based on the equipment value. The deposit is fully refundable upon return of equipment in good condition.",
+      "Booking your event package is simple: Browse through the available packages on our website, select a package that fits your event needs, click on 'Request Quote' to connect with us on WhatsApp, share your event details, and we’ll provide you with pricing and availability. Confirm your booking with us, and we’ll handle the rest!",
   },
   {
     id: 8,
-    question: "Can I extend my rental period?",
+    question: "Can I customize the packages?",
     answer:
-      "Yes, rental extensions are possible subject to availability. Please contact us at least 24 hours before your scheduled return time to arrange an extension.",
+      "Yes, we offer customizable options within our packages to meet your specific requirements. Just let us know your preferences when you reach out via WhatsApp.",
+  },
+  {
+    id: 9,
+    question: "How early should I book my package?",
+    answer:
+      "We recommend booking your package at least 2-3 weeks in advance to ensure availability and timely arrangements.",
+  },
+  {
+    id: 10,
+    question: "Who handles the delivery and setup of the materials?",
+    answer:
+      "Our vendor partners take care of the delivery and setup for your event, ensuring everything is ready on time.",
+  },
+  {
+    id: 11,
+    question: "Is there an additional charge for delivery and setup?",
+    answer:
+      "Delivery and setup charges depend on the package and location. These details will be shared with you during the quote discussion on WhatsApp.",
+  },
+  {
+    id: 12,
+    question: "How do I make a payment?",
+    answer:
+      "Payments can be made online or via bank transfer after confirming the quote and booking details.",
+  },
+  {
+    id: 13,
+    question: "What is your cancellation policy?",
+    answer:
+      "Cancellation policies vary by vendor. Once you book a package, we’ll share the vendor’s cancellation terms with you.",
+  },
+  {
+    id: 14,
+    question: "How can I contact you for further assistance?",
+    answer:
+      "You can reach us via the 'Request Quote' button on our website, which connects you directly to our WhatsApp support team.",
+  },
+  {
+    id: 15,
+    question: "What if I need help choosing a package?",
+    answer:
+      "Our team is here to assist! Click 'Request Quote' and share your event details on WhatsApp. We’ll guide you to the best package for your needs.",
+  },
+  {
+    id: 16,
+    question: "Will you be adding more features in the future?",
+    answer:
+      "Yes! We plan to introduce individual rentals, additional categories, and an integrated app to make your event planning experience even smoother.",
+  },
+  {
+    id: 17,
+    question: "How can I stay updated on your services?",
+    answer:
+      "Follow us on social media or bookmark our website for the latest updates and offerings.",
   },
 ];
 

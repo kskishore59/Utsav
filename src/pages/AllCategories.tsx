@@ -89,7 +89,7 @@ export default function AllCategories() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-4xl font-bold text-gray-900 mb-8 font-playfair text-center"
+        className="text-4xl font-inter text-gray-900 mb-8 text-center"
       >
         Our Equipment Categories
       </motion.h1>
@@ -108,6 +108,7 @@ export default function AllCategories() {
             whileTap={{ scale: 0.98 }}
             className="cursor-pointer group"
             onClick={() => navigate(`/category/${category.id}`)}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div className="relative overflow-hidden rounded-lg shadow-lg bg-white">
               <div className="relative h-64">
@@ -128,10 +129,10 @@ export default function AllCategories() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 * index }}
               >
-                <h2 className="text-2xl font-bold text-white mb-2 font-playfair drop-shadow-lg">
+                <h2 className="text-2xl font-inter-600 text-white mb-2 drop-shadow-lg">
                   {category.name}
                 </h2>
-                <p className="text-white text-sm opacity-90 font-poppins drop-shadow-md">
+                <p className="text-white text-sm opacity-90 font-inter drop-shadow-md">
                   {category.description}
                 </p>
               </motion.div>
@@ -142,11 +143,11 @@ export default function AllCategories() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 + 0.1 * index }}
               >
-                <span className="text-sm font-medium text-gray-800">
+                {/* <span className="text-sm font-medium text-gray-800">
                   {PRODUCTS.filter((each) => each.category === category).length}{" "}
                   items
-                </span>
-              </motion.div> */}
+                </span> */}
+              {/* </motion.div> */}
             </div>
           </motion.div>
         ))}

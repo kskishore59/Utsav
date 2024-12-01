@@ -60,8 +60,11 @@ export function Card({
             </p>
           )}
           {price && (
-            <p className="mt-1.5 text-sm font-semibold text-indigo-600">
-              ₹{price}
+            <p className="mt-1.5 text-md font-semibold justify-end text-indigo-600">
+              <span className="text-md font-500 text-indigo">
+                Starting from
+              </span>{" "}
+              <br />₹{price}
             </p>
           )}
         </div>

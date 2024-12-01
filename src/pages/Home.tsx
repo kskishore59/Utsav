@@ -1,37 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  Music,
-  Lightbulb,
-  PartyPopper,
-  Trophy,
-  // Ring is not exported from lucide-react
-  Cake,
-  Utensils,
-  Mic,
-  Camera,
-  Gift,
-  BellRingIcon,
-  ArrowRight,
-  PhoneCallIcon,
-  Headphones,
-  Clock,
-  Shield,
-  CheckCircle,
-} from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import ContactForm from "../components/ContactForm";
-import LazyImage from "../components/LazyImage";
+import {
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Headphones,
+  Lightbulb,
+  MessageCircle,
+  Music,
+  PartyPopper,
+  Shield,
+  Trophy,
+} from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import FeedbackButton from "../components/FeedbackButton";
+import LazyImage from "../components/LazyImage";
+import ConsultationForm from "../components/ConsultationForm";
 
 // Create a reusable scroll animation component
 function ScrollAnimation({ children }: { children: React.ReactNode }) {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    threshold: 0.2, // Triggers when 20% of element is in view
-    margin: "0px 0px -100px 0px", // Negative margin to trigger earlier
+    threshold: 0.4, // Triggers when 20% of element is in view
+    margin: "0px 0px -50px 0px", // Negative margin to trigger earlier
   });
 
   return (
@@ -62,6 +54,8 @@ function ScrollAnimation({ children }: { children: React.ReactNode }) {
 }
 
 export default function Home() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div className="space-y-20 mt-5">
       {/* Hero Section */}
@@ -75,7 +69,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80" />
           <img
-            src="landingpageimage.jpg"
+            src="event-two.jpeg"
             alt="Hero Background"
             className="h-full w-full object-cover"
           />
@@ -140,17 +134,15 @@ export default function Home() {
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
 
-                <a
-                  href="https://wa.me/916300996714"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 rounded-full bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
+                <button
+                  onClick={() => setIsFormOpen(true)}
+                  className="group inline-flex items-center gap-2 rounded-full bg-white/10 
+                           px-8 py-4 text-base font-semibold text-white backdrop-blur-sm 
+                           transition-all hover:bg-white/20"
                 >
-                  Contact Us
-                  <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                    <PhoneCallIcon />
-                  </svg>
-                </a>
+                  Free event planning consultation
+                  <MessageCircle className="h-5 w-5" />
+                </button>
               </motion.div>
             </motion.div>
           </div>
@@ -168,14 +160,14 @@ export default function Home() {
               icon={<Music className="h-8 w-8" />}
               title="Sound Systems"
               description="Professional audio equipment for any venue size"
-              image="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80"
+              image="AI-Generated-Image.jpeg"
               link="/category/sound"
             />
             <CategoryCard
               icon={<Lightbulb className="h-8 w-8" />}
               title="Lighting"
               description="Create the perfect atmosphere with our lighting solutions"
-              image="https://images.unsplash.com/photo-1504509546545-e000b4a62425?auto=format&fit=crop&q=80"
+              image="sharpies-two.jpg"
               link="/category/lighting"
             />
             <CategoryCard
@@ -189,7 +181,7 @@ export default function Home() {
               icon={<PartyPopper className="h-8 w-8" />}
               title="View All Categories"
               description=""
-              image=""
+              image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
               link="/categories"
             />
           </div>
@@ -204,9 +196,11 @@ export default function Home() {
               Why Choose Utsav?
             </h2>
             <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-              India's premier event equipment rental platform, bringing
-              professional-grade equipment and seamless service to make your
-              celebrations extraordinary.
+              We have thoroughly researched and verified vendors and their
+              products, removing the hassle of finding reliable partners. As a
+              premier event equipment rental platform, we offer
+              professional-grade equipment and seamless service to elevate your
+              celebrations to the next level.
             </p>
           </div>
 
@@ -214,7 +208,7 @@ export default function Home() {
             <Feature
               icon={<Trophy className="h-6 w-6" />}
               title="Premium Equipment Collection"
-              description="Access to high-end sound systems, professional lighting, and premium event gear from industry-leading brands. All equipment is meticulously maintained and tested before each rental."
+              description="Access to high-end sound systems, professional lighting, and premium event gear. All equipment is meticulously maintained and tested before each rental."
             />
             <Feature
               icon={<PartyPopper className="h-6 w-6" />}
@@ -239,7 +233,7 @@ export default function Home() {
             <Feature
               icon={<Shield className="h-6 w-6" />}
               title="Quality Assured"
-              description="Every piece of equipment is covered by insurance and undergoes rigorous quality checks. We provide backup equipment for critical components ensuring uninterrupted events."
+              description="Every piece of equipment undergoes rigorous quality checks. We provide backup equipment for critical components ensuring uninterrupted events."
             />
           </div>
 
@@ -253,18 +247,18 @@ export default function Home() {
                 family gatherings to large-scale corporate events. Our platform
                 simplifies the rental process with:
               </p>
-              <ul className="flex-col items-center justify-center text-center max-w-2xl mx-auto space-y-4 text-gray-600">
-                <li className="flex items-start">
+              <ul className="flex-col items-center max-w-2xl mx-auto space-y-4 text-gray-600">
+                <li className="flex items-center">
                   <CheckCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                   <span>
                     Easy online booking system with real-time availability
                   </span>
                 </li>
-                <li className="flex items-start">
+                <li className="flex items-center">
                   <CheckCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                   <span>Transparent pricing with no hidden charges</span>
                 </li>
-                <li className="flex items-start">
+                <li className="flex items-center">
                   <CheckCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                   <span>Customer support for immediate assistance</span>
                 </li>
@@ -278,6 +272,11 @@ export default function Home() {
 
       {/* <ContactForm /> */}
       <FeedbackButton />
+
+      <ConsultationForm
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </div>
   );
 }
