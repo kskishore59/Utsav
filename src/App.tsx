@@ -54,57 +54,55 @@ const AppContent = memo(() => {
 
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <div className="min-h-screen flex flex-col bg-gray-50">
-          <Suspense fallback={<LoadingScreen />}>
-            <Navbar />
-            <main className="flex-grow mt-10">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/categories" element={<AllCategories />} />
-                <Route path="/all-products" element={<AllProducts />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
-                <Route path="/category/:category" element={<Category />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route
-                  path="/terms-and-conditions"
-                  element={<TermsAndConditions />}
-                />
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Suspense fallback={<LoadingScreen />}>
+          <Navbar />
+          <main className="flex-grow mt-10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/categories" element={<AllCategories />} />
+              <Route path="/all-products" element={<AllProducts />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
+              <Route path="/category/:category" element={<Category />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route
+                path="/terms-and-conditions"
+                element={<TermsAndConditions />}
+              />
 
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/admin/login" element={<AdminLogin />} />
-                <Route
-                  path="/admin/products"
-                  element={
-                    <AdminRoute>
-                      <AdminProducts />
-                    </AdminRoute>
-                  }
-                />
-                <Route
-                  path="/admin/products/new"
-                  element={
-                    <AdminRoute>
-                      <ProductForm />
-                    </AdminRoute>
-                  }
-                />
-                <Route
-                  path="/admin/products/:id"
-                  element={
-                    <AdminRoute>
-                      <ProductForm />
-                    </AdminRoute>
-                  }
-                />
-              </Routes>
-            </main>
-            <Footer />
-          </Suspense>
-        </div>
-      </BrowserRouter>
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route
+                path="/admin/products"
+                element={
+                  <AdminRoute>
+                    <AdminProducts />
+                  </AdminRoute>
+                }
+              />
+              <Route
+                path="/admin/products/new"
+                element={
+                  <AdminRoute>
+                    <ProductForm />
+                  </AdminRoute>
+                }
+              />
+              <Route
+                path="/admin/products/:id"
+                element={
+                  <AdminRoute>
+                    <ProductForm />
+                  </AdminRoute>
+                }
+              />
+            </Routes>
+          </main>
+          <Footer />
+        </Suspense>
+      </div>
     </AuthProvider>
   );
 });
