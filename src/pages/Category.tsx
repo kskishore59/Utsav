@@ -17,11 +17,7 @@ export default function Category() {
   const products = category
     ? PRODUCTS.filter((product) => product.category === category)
     : [];
-  console.log({
-    category,
-    availableCategories: Object.keys(PRODUCTS),
-    productsForCategory: PRODUCTS[category as keyof typeof PRODUCTS],
-  });
+
   const categoryTitle = category
     ? category.charAt(0).toUpperCase() + category.slice(1)
     : "";

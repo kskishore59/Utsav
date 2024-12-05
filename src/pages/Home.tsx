@@ -91,7 +91,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="mb-6 inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
               >
-                Premium Event Equipment Rentals
+                Event Equipment Rentals
               </motion.p>
 
               {/* Main Heading */}
@@ -140,7 +140,7 @@ export default function Home() {
                            px-8 py-4 text-base font-semibold text-white backdrop-blur-sm 
                            transition-all hover:bg-white/20"
                 >
-                  Free event planning consultation
+                  Book a free call
                   <MessageCircle className="h-5 w-5" />
                 </button>
               </motion.div>

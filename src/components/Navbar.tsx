@@ -15,7 +15,9 @@ export default function Navbar() {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
+
     setSearchQuery(query);
+    console.log(searchQuery);
 
     if (query.trim() === "") {
       setSearchResults([]);
@@ -26,8 +28,8 @@ export default function Navbar() {
       const searchTerm = query.toLowerCase();
       return (
         product.name.toLowerCase().includes(searchTerm) ||
-        product.category.toLowerCase().includes(searchTerm) ||
-        product.description.toLowerCase().includes(searchTerm)
+        product.category.toLowerCase().includes(searchTerm)
+        // product.description.toLowerCase().includes(searchTerm)
       );
     }).slice(0, 5);
 

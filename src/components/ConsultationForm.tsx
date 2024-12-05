@@ -13,7 +13,7 @@ export default function ConsultationForm({
 }: ConsultationFormProps) {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
+    phoneNumber: "",
     eventType: "",
     query: "",
   });
@@ -46,7 +46,7 @@ export default function ConsultationForm({
       const whatsappUrl = `https://wa.me/916300996714?text=${message}`;
 
       // Reset form and close modal
-      setFormData({ name: "", phone: "", eventType: "", query: "" });
+      setFormData({ name: "", phoneNumber: "", eventType: "", query: "" });
       onClose();
 
       // Open WhatsApp
@@ -110,9 +110,9 @@ export default function ConsultationForm({
                 <input
                   type="tel"
                   required
-                  value={formData.phone}
+                  value={formData.phoneNumber}
                   onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
+                    setFormData({ ...formData, phoneNumber: e.target.value })
                   }
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   placeholder="Your phone number"

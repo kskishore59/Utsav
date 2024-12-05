@@ -93,7 +93,7 @@ function ProductDetail() {
                 ))}
               </ul>
             </motion.div>
-
+            {/* 
             <div className="mt-8 p-6 bg-gray-50 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
                 Rental Information
@@ -127,7 +127,7 @@ function ProductDetail() {
                   )}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <motion.a

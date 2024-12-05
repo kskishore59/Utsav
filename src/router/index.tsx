@@ -7,7 +7,9 @@ import { ErrorBoundary } from "../components/ErrorBoundary";
 const Home = lazy(() => import("../pages/Home"));
 const AllCategories = lazy(() => import("../pages/AllCategories"));
 const ProductDetail = lazy(() => import("../pages/ProductDetail"));
-// const CategoryProducts = lazy(() => import("../pages/CategoryProducts"));
+const CategoryProducts = lazy(() => import("../pages/CategoryProducts"));
+const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("../pages/TermsAndConditions"));
 
 export const router = createBrowserRouter([
   {
@@ -40,14 +42,34 @@ export const router = createBrowserRouter([
       </ErrorBoundary>
     ),
   },
-  //   {
-  //     path: "/category/:id",
-  //     element: (
-  //       <ErrorBoundary>
-  //         <Suspense fallback={<PageLoader />}>
-  //           <CategoryProducts />
-  //         </Suspense>
-  //       </ErrorBoundary>
-  //     ),
-  //   },
+  {
+    path: "/category/:id",
+    element: (
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
+          <CategoryProducts />
+        </Suspense>
+      </ErrorBoundary>
+    ),
+  },
+  {
+    path: "/privacy-policy",
+    element: (
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
+          <PrivacyPolicy />
+        </Suspense>
+      </ErrorBoundary>
+    ),
+  },
+  {
+    path: "/terms-and-conditions",
+    element: (
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
+          <TermsAndConditions />
+        </Suspense>
+      </ErrorBoundary>
+    ),
+  },
 ]);

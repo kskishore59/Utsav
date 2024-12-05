@@ -17,8 +17,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <Package className="h-8 w-8 text-indigo-400" />
-              <span className="text-2xl font-bold text-white">Utsav</span>
+              <img
+                src="/utsav-footer-logo-1.png"
+                alt="logo"
+                style={{ height: "5rem", width: "15rem", marginLeft: "0px" }}
+              />
             </div>
             <p className="text-gray-400 leading-relaxed">
               Transform your events into extraordinary experiences with Utsav.
@@ -33,7 +36,8 @@ export default function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/myutsav.in?igsh=NGgwNGYzejkxdWsz"
+                target="blank"
                 className="text-gray-400 hover:text-indigo-400 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
@@ -136,14 +140,14 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Utsav. All rights reserved.
               <span className="mx-2">|</span>
               <Link
-                to="/privacy"
+                to="/privacy-policy"
                 className="hover:text-indigo-400 transition-colors"
               >
                 Privacy Policy
               </Link>
               <span className="mx-2">|</span>
               <Link
-                to="/terms"
+                to="/terms-and-conditions"
                 className="hover:text-indigo-400 transition-colors"
               >
                 Terms of Service

@@ -692,6 +692,7 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
+      "https://i.postimg.cc/jS81v02C/Snapinsta-app-432075118-1598052097626704-9076143774487201249-n-1080.jpg",
       "https://i.postimg.cc/66RZStdQ/Basic-in-house-Mehndi-backdrop-decor.jpg",
       "https://i.postimg.cc/4y4YgxhQ/def82651-f974-40f3-b528-9f50e0a2207c.jpg",
       "https://i.postimg.cc/44wK1VrL/c8f80ca3-8587-433c-8925-e6f5c16f1123.jpg",
