@@ -49,6 +49,7 @@ export function Card({
               imageLoading ? "opacity-0" : "opacity-100"
             }`}
             onLoad={() => setImageLoading(false)}
+            aria-placeholder="blur"
           />
         </div>
         <div className="p-3">

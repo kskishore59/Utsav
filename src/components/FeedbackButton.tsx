@@ -18,7 +18,7 @@ export default function FeedbackButton() {
       >
         <div className="flex items-center gap-2">
           <MessageSquareHeart className="h-5 w-5" />
-          <span className="font-medium pr-2">Feedback</span>
+          <span className="font-medium pr-2 hidden md:block">Feedback</span>
         </div>
       </motion.button>
     </motion.div>

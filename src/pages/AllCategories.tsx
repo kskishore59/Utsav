@@ -120,6 +120,7 @@ export default function AllCategories() {
                   initial={{ scale: 1.2 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5 }}
+                  aria-placeholder="blur"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 group-hover:bg-opacity-30" />
               </div>
