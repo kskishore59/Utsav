@@ -109,14 +109,14 @@ export default function Navbar() {
               )}
             </div>
             <Link
-              to="/categories"
+              to="/category"
               className="flex items-center space-x-1 text-gray-600 hover:text-indigo-600"
             >
               <Package className="h-5 w-5" />
               <span>All Categories</span>
             </Link>
             <Link
-              to="/all-products"
+              to="/products"
               className="flex items-center space-x-1 text-gray-600 hover:text-indigo-600"
             >
               <Package className="h-5 w-5" />

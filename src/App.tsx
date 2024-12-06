@@ -1,4 +1,4 @@
-import { lazy, memo, Suspense, useEffect } from "react";
+import { lazy, memo, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import AdminRoute from "./components/AdminRoute";
 
@@ -17,6 +17,7 @@ import AllProducts from "./pages/Categories";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import ReactGA from "react-ga4";
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));
@@ -60,9 +61,9 @@ const AppContent = memo(() => {
           <main className="flex-grow mt-10">
             <Routes>
               <Route path="/*" element={<Home />} />
-              <Route path="/categories" element={<AllCategories />} />
-              <Route path="/all-products" element={<AllProducts />} />
-              <Route path="/product/:id" element={<ProductDetail />} />
+              <Route path="/category" element={<AllCategories />} />
+              <Route path="/products" element={<AllProducts />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
               <Route path="/category/:category" element={<Category />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -121,6 +122,38 @@ const preloadRoutes = () => {
 };
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Initialize Google Analytics
+    ReactGA.initialize("G-33FZLJVGCD");
+  }, []);
+
+  useEffect(() => {
+    // Track page views
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname,
+    });
+
+    // Optional: Track exit pages
+    const handleBeforeUnload = () => {
+      ReactGA.send({
+        hitType: "event",
+        eventCategory: "User",
+        eventAction: "Exit Page",
+        eventLabel: location.pathname,
+      });
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [location]);
+
   useEffect(() => {
     // Preload routes when idle
     if ("requestIdleCallback" in window) {
@@ -128,13 +161,20 @@ const App = () => {
     } else {
       setTimeout(preloadRoutes, 1000);
     }
+
+    // Set loading to false after 2 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 2 seconds loading time
+
+    return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
 
   return (
     <ErrorBoundary>
       <PerformanceProvider>
         <BrowserRouter>
-          <Suspense fallback={<LoadingScreen />}>
+          <Suspense fallback={loading ? <LoadingScreen /> : null}>
             <AppContent />
           </Suspense>
         </BrowserRouter>

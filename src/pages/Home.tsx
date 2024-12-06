@@ -127,7 +127,7 @@ export default function Home() {
                 className="flex flex-wrap gap-4"
               >
                 <Link
-                  to="/categories"
+                  to="/category"
                   className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-gray-900 transition-all hover:bg-gray-100"
                 >
                   Browse Equipment

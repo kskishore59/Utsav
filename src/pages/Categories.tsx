@@ -276,7 +276,7 @@ export default function AllProducts() {
         {filteredProducts.map((product) => (
           <Card
             key={product.id}
-            href={`/product/${product.id}`}
+            href={`/products/${product.id}`}
             image={product.image[0]}
             title={product.name}
             description={product.description}
