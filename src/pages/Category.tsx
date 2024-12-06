@@ -49,7 +49,7 @@ export default function Category() {
         {filteredProducts.map((product: Product) => (
           <Card
             key={product.id}
-            href={`/product/${product.id}`}
+            href={`/products/${product.id}`}
             image={product.image[0]}
             title={product.name}
             description={product.description}

@@ -124,8 +124,6 @@ const preloadRoutes = () => {
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-  // const location = useLocation();
-
   // useEffect(() => {
   //   // Initialize Google Analytics
   //   ReactGA.initialize("G-33FZLJVGCD");
