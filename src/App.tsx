@@ -124,35 +124,35 @@ const preloadRoutes = () => {
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    // Initialize Google Analytics
-    ReactGA.initialize("G-33FZLJVGCD");
-  }, []);
+  // useEffect(() => {
+  //   // Initialize Google Analytics
+  //   ReactGA.initialize("G-33FZLJVGCD");
+  // }, []);
 
-  useEffect(() => {
-    // Track page views
-    ReactGA.send({
-      hitType: "pageview",
-      page: location.pathname,
-    });
+  // useEffect(() => {
+  //   // Track page views
+  //   ReactGA.send({
+  //     hitType: "pageview",
+  //     page: location.pathname,
+  //   });
 
-    // Optional: Track exit pages
-    const handleBeforeUnload = () => {
-      ReactGA.send({
-        hitType: "event",
-        eventCategory: "User",
-        eventAction: "Exit Page",
-        eventLabel: location.pathname,
-      });
-    };
+  //   // Optional: Track exit pages
+  //   const handleBeforeUnload = () => {
+  //     ReactGA.send({
+  //       hitType: "event",
+  //       eventCategory: "User",
+  //       eventAction: "Exit Page",
+  //       eventLabel: location.pathname,
+  //     });
+  //   };
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, [location]);
+  //   window.addEventListener("beforeunload", handleBeforeUnload);
+  //   return () => {
+  //     window.removeEventListener("beforeunload", handleBeforeUnload);
+  //   };
+  // }, [location]);
 
   useEffect(() => {
     // Preload routes when idle
