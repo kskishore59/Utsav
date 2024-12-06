@@ -34,7 +34,7 @@ export default function AllProducts() {
   });
 
   const categories = [
-    { id: "sound", label: "Sound" },
+    { id: "sound", label: "Sound And Visuals" },
     { id: "lighting", label: "Lighting" },
     { id: "decor", label: "Decor" },
   ];
@@ -137,7 +137,6 @@ export default function AllProducts() {
     <Section className="container mx-auto px-4 py-8">
       {/* Search Bar */}
       <div className="mb-8"></div>
-
       {/* Filters Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <Dropdown
@@ -251,7 +250,6 @@ export default function AllProducts() {
           </div>
         </Dropdown>
       </div>
-
       {/* Active Filters Count */}
       {getActiveFilterCount() > 0 && (
         <Button
@@ -273,18 +271,20 @@ export default function AllProducts() {
 
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProducts.map((product) => (
-          <Card
-            key={product.id}
-            href={`/products/${product.id}`}
-            image={product.image[0]}
-            title={product.name}
-            description={product.description}
-            price={product.price}
-          />
-        ))}
+        {filteredProducts.map((product) => {
+          console.log(product);
+          return (
+            <Card
+              key={product.id}
+              href={`/products/${product.id}`}
+              image={product.image[0]}
+              title={product.name}
+              description={product.description}
+              price={product.price}
+            />
+          );
+        })}
       </div>
-
       {filteredProducts.length === 0 && (
         <div className="text-center py-12">
           <p className="text-gray-500">

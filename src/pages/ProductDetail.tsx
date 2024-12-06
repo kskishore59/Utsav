@@ -69,30 +69,62 @@ function ProductDetail() {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
                 Specifications
               </h3>
-              <ul className="space-y-2">
-                {product.specifications.map((spec, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    className="flex items-center text-gray-700"
-                  >
-                    <svg
-                      className="w-4 h-4 mr-2 text-indigo-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {spec}
-                  </motion.li>
-                ))}
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <ul className="space-y-2">
+                  {/* Left Column Specifications */}
+                  {product.specifications
+                    .slice(0, Math.ceil(product.specifications.length / 2))
+                    .map((spec, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
+                        className="flex items-center text-gray-700"
+                      >
+                        <svg
+                          className="w-4 h-4 mr-2 text-indigo-500"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        {spec}
+                      </motion.li>
+                    ))}
+                </ul>
+                <ul className="space-y-2">
+                  {/* Right Column Specifications */}
+                  {product.specifications
+                    .slice(Math.ceil(product.specifications.length / 2))
+                    .map((spec, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
+                        className="flex items-center text-gray-700"
+                      >
+                        <svg
+                          className="w-4 h-4 mr-2 text-indigo-500"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        {spec}
+                      </motion.li>
+                    ))}
+                </ul>
+              </div>
             </motion.div>
             {/* 
             <div className="mt-8 p-6 bg-gray-50 rounded-lg shadow-sm">

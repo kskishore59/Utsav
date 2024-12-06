@@ -57,9 +57,9 @@ export default function Home() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <div className="space-y-20 mt-5">
+    <div className="space-y-20 mt-6">
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
+      <section className="relative h-screen  min-h-[600px] w-full overflow-hidden">
         {/* Background Image with Overlay */}
         <motion.div
           initial={{ scale: 1.1 }}
@@ -77,7 +77,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-screen min-h-[600px] flex-col justify-center">
+          <div className="flex h-screen min-h-[600] flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -168,7 +168,7 @@ export default function Home() {
               title="Lighting"
               description="Create the perfect atmosphere with our lighting solutions"
               image="sharpies-two.jpg"
-              link="/category/lighting"
+              link="/category/light"
             />
             <CategoryCard
               icon={<PartyPopper className="h-8 w-8" />}
@@ -182,7 +182,7 @@ export default function Home() {
               title="View All Categories"
               description=""
               image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
-              link="/categories"
+              link="/category"
             />
           </div>
         </div>

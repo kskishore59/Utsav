@@ -42,6 +42,10 @@ export default function Navbar() {
     setSearchQuery("");
   };
 
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`); // Navigate to the product detail page
+  };
+
   const createWhatsAppLink = () => {
     const message = encodeURIComponent(
       `Hi, I have doubts regarding the product booking on your website and needs clarification`
@@ -81,7 +85,7 @@ export default function Navbar() {
                   {searchResults.map((product) => (
                     <Link
                       key={product.id}
-                      to={`/product/${product.id}`}
+                      to={`/products/${product.id}`}
                       className="block px-4 py-3 hover:bg-gray-50 transition-colors duration-200"
                       onClick={() => {
                         setSearchQuery("");
@@ -165,11 +169,14 @@ export default function Navbar() {
                     isOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
                   }`}
                 />
-                <X
-                  className={`absolute transform transition-all duration-300 ease-in-out ${
+                <button
+                  className={`absolute right-3 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition duration-300 ease-in-out ${
                     isOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
                   }`}
-                />
+                  aria-label="Close Search"
+                >
+                  <X className="h-4 w-4 text-gray-600" />
+                </button>
               </div>
             </button>
           </div>
@@ -178,9 +185,12 @@ export default function Navbar() {
 
       {isOpen && (
         <div
-          className={`md:hidden fixed inset-0 top-16 bg-white shadow-lg transform transition-all duration-300 ease-in-out ${
-            isOpen ? "translate-x-0" : "translate-x-full"
+          className={`md:hidden fixed inset-0 top-16 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+            isOpen
+              ? "translate-x-0 opacity-100 scale-100"
+              : "translate-x-full opacity-0 scale-95"
           }`}
+          style={{ pointerEvents: isOpen ? "auto" : "none" }} // Prevent interaction when closed
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <div className="px-3 py-2">
@@ -197,11 +207,11 @@ export default function Navbar() {
               {searchResults.length > 0 && (
                 <div className="mt-1 bg-white rounded-md shadow-lg border border-gray-200">
                   {searchResults.map((product) => (
-                    <div
+                    <Link
                       key={product.id}
-                      className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      to={`/products/${product.id}`}
+                      className="block px-4 py-3 hover:bg-gray-50 transition-colors duration-200"
                       onClick={() => {
-                        navigate(`/product/${product.id}`);
                         setSearchQuery("");
                         setSearchResults([]);
                         setIsOpen(false);
@@ -218,24 +228,24 @@ export default function Navbar() {
                             {product.name}
                           </div>
                           <div className="text-xs text-gray-500">
-                            ${product.price}
+                            Starting from ₹{product.price}
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
             <Link
-              to="/categories"
+              to="/category"
               className="block px-3 py-2 text-gray-600 transition-colors duration-200 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg"
               onClick={handleNavClick}
             >
               All Categories
             </Link>
             <Link
-              to="/all-products"
+              to="/products"
               className="block px-3 py-2 text-gray-600 transition-colors duration-200 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg"
               onClick={handleNavClick}
             >

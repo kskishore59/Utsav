@@ -4,17 +4,16 @@ import { motion } from "framer-motion";
 const CATEGORIES = [
   {
     id: "sound",
-    name: "Sound Equipment",
-    image:
-      "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&q=80",
-    description: "Professional audio systems and equipment",
+    name: "Sound And Visual Effects",
+    image: "/sharpies-two.jpg",
+    description: "Professional audio systems and Visual effects equipment",
   },
   {
     id: "lighting",
     name: "Lighting",
     image:
       "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80",
-    description: "Stage and event lighting solutions",
+    description: "Event, business and Home lighting solutions",
   },
   {
     id: "decor",

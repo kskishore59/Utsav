@@ -13,10 +13,13 @@ const createWhatsAppLink = (product: Product) => {
 export default function Category() {
   const { category } = useParams();
   const [searchQuery, setSearchQuery] = useState("");
+  console.log(category);
 
   const products = category
-    ? PRODUCTS.filter((product) => product.category === category)
+    ? PRODUCTS.filter((product) => product.category.includes(category))
     : [];
+
+  console.log(products);
 
   const categoryTitle = category
     ? category.charAt(0).toUpperCase() + category.slice(1)

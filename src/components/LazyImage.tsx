@@ -29,7 +29,7 @@ export default function LazyImage({
 
   return (
     <motion.div
-      className={`relative overflow-hidden ${className}`}
+      className={` overflow-hidden ${className}`}
       animate={{ opacity: isLoaded ? 1 : 0.5 }}
       transition={{ duration: 0.3 }}
     >
