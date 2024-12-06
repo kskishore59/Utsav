@@ -34,6 +34,7 @@ export function Carousel({ images }: CarouselProps) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3 }}
+            loading="lazy"
           />
         </AnimatePresence>
       </div>

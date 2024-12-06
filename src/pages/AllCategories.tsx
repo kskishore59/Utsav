@@ -114,6 +114,7 @@ export default function AllCategories() {
               <div className="relative h-64">
                 <motion.img
                   src={category.image}
+                  loading="lazy"
                   alt={category.name}
                   className="w-full h-full object-cover"
                   initial={{ scale: 1.2 }}

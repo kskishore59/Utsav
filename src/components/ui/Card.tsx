@@ -44,6 +44,7 @@ export function Card({
             transition={{ duration: 0.3 }}
             src={image}
             alt={title}
+            loading="lazy"
             className={`h-full w-full object-cover object-center transition-opacity duration-300 ${
               imageLoading ? "opacity-0" : "opacity-100"
             }`}

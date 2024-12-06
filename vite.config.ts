@@ -7,5 +7,10 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["lucide-react"],
   },
-  server: { historyApiFallback: true },
+  server: {
+    historyApiFallback: true,
+  },
+  preview: {
+    historyApiFallback: true,
+  },
 });
