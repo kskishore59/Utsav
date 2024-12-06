@@ -59,7 +59,7 @@ const AppContent = memo(() => {
           <Navbar />
           <main className="flex-grow mt-10">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/*" element={<Home />} />
               <Route path="/categories" element={<AllCategories />} />
               <Route path="/all-products" element={<AllProducts />} />
               <Route path="/product/:id" element={<ProductDetail />} />

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 function ProductDetail() {
   const { id } = useParams();
   const product = PRODUCTS.find((p) => p.id === id);
+  console.log(product);
 
   if (!product) {
     return <div className="container mx-auto px-4 py-8">Product not found</div>;
