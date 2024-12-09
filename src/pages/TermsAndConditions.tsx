@@ -6,59 +6,68 @@ const TermsAndConditions = () => {
       </h1>
 
       <p className="text-gray-700 mb-4">
-        Welcome to our website. These terms and conditions outline the rules and
-        regulations for the use of our website.
+        Welcome to our event rental platform! By using our services, you agree
+        to the following terms and conditions. Let's make your event
+        unforgettable!
       </p>
       <div className="text-start">
         <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
           Acceptance of Terms
         </h2>
         <p className="text-gray-700 mb-4">
-          By accessing this website, you accept these terms and conditions in
-          full. If you disagree with any part of these terms, you must not use
-          our website.
+          By accessing our website and utilizing our services, you acknowledge
+          that you have read, understood, and agree to these terms in full. If
+          you do not agree, please refrain from using our services.
         </p>
+
         <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
           Intellectual Property Rights
         </h2>
         <p className="text-gray-700 mb-4">
-          Other than the content you own, under these Terms, we own all the
-          intellectual property rights and materials contained in this website.
+          All content, trademarks, and other intellectual property on this
+          website are owned by us or our licensors. You may not use, reproduce,
+          or distribute any materials without our express written consent.
         </p>
+
         <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
-          Restrictions
+          User Responsibilities
         </h2>
-        <p className="text-gray-700 mb-4">
-          You are specifically restricted from all of the following:
-        </p>
+        <p className="text-gray-700 mb-4">As a user, you agree to:</p>
         <ul className="list-disc list-inside mb-4">
-          <li>Publishing any website material in any other media.</li>
+          <li>Provide accurate information when booking services.</li>
           <li>
-            Using this website in any way that is or may be damaging to this
-            website.
+            Respect the rights of others and not engage in any harmful
+            activities.
           </li>
           <li>
-            Using this website in any way that impacts user access to this
-            website.
+            Use our services in a manner that complies with all applicable laws.
           </li>
         </ul>
+
         <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
           Limitation of Liability
         </h2>
         <p className="text-gray-700 mb-4">
-          In no event shall we, nor any of our officers, directors, and
-          employees, be liable to you for anything arising out of or in any way
-          connected with your use of this website.
+          We strive to provide the best service possible. However, we cannot be
+          held liable for any indirect, incidental, or consequential damages
+          arising from your use of our website or services.
         </p>
+
         <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
           Changes to These Terms
         </h2>
         <p className="text-gray-700 mb-4">
-          We may update our terms and conditions from time to time. We will
-          notify you of any changes by posting the new terms on this page.
+          We may update our terms and conditions periodically. Any changes will
+          be posted on this page, and your continued use of our services
+          constitutes acceptance of those changes.
         </p>
+
+        <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+          Contact Us
+        </h2>
         <p className="text-gray-700 mb-4">
-          If you have any questions about these terms, please contact us.
+          If you have any questions or concerns regarding these terms, please
+          reach out to us through our contact page. We're here to help!
         </p>
       </div>
     </div>

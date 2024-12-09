@@ -36,8 +36,6 @@ export default function ConsultationForm({
         }
       );
 
-      console.log(response);
-
       //   if (response.ok) {
       // Create WhatsApp link with form data
       const message = encodeURIComponent(

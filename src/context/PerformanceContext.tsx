@@ -9,7 +9,6 @@ const PerformanceContext = createContext<PerformanceContextType | null>(null);
 export const PerformanceProvider = ({ children }: { children: ReactNode }) => {
   const markComponentRender = useCallback((componentName: string) => {
     performance.mark(`${componentName}-rendered`);
-    console.log(`${componentName} rendered at:`, performance.now());
   }, []);
 
   return (

@@ -8,103 +8,103 @@ const FAQData = [
     id: 1,
     question: "Who are we, and what do we do?",
     answer:
-      "We are an event rental platform connecting you with the best vendors for all your event needs. From lighting and sound to complete packages, we simplify the process of renting high-quality materials for any type of event, all in one place.",
+      "We’re your go-to event rental platform, connecting you with top-notch vendors for all your celebration needs! From dazzling lighting to immersive sound systems, we make renting high-quality gear a breeze, all in one stylish spot.",
   },
   {
     id: 2,
     question: "What types of events do you cater to?",
     answer:
-      "We cater to all types of events, including weddings, corporate functions, birthday parties, cultural events, and more. Whether it’s a small gathering or a grand celebration, we have packages to suit every occasion.",
+      "We’ve got you covered for every occasion! Whether it’s a dreamy wedding, a corporate gala, a fun birthday bash, or vibrant cultural festivities, our diverse packages fit every celebration, big or small.",
   },
   {
     id: 3,
     question: "Why choose us?",
     answer:
-      "We simplify your event planning process by offering: Verified and reliable vendors, affordable pricing, a hassle-free booking experience, and a range of customizable packages tailored to your needs.",
+      "We simplify your event planning with verified vendors, budget-friendly pricing, a seamless booking experience, and customizable packages tailored just for you. Let’s make your event unforgettable!",
   },
   {
     id: 4,
     question: "What kind of packages do you offer?",
     answer:
-      "Our packages are designed for different types of events and include essentials like lighting, sound systems, stage setups, and decorations. Each package is customizable based on your requirements.",
+      "Our packages are crafted for various events, featuring essentials like stunning lighting, powerful sound systems, stage setups, and beautiful decorations. Plus, each package is fully customizable to match your vision!",
   },
   {
     id: 5,
     question: "Can I rent individual items instead of a package?",
     answer:
-      "Currently, we are focusing on package-based rentals to ensure a seamless and cost-effective experience. However, stay tuned as we expand our services!",
+      "Right now, we’re all about those fabulous packages to ensure a smooth and cost-effective experience. But stay tuned—more options are on the horizon!",
   },
   {
     id: 6,
     question: "How can I find out the pricing for the packages?",
     answer:
-      "To get the best prices, simply click the 'Request Quote' button on the package you're interested in. You’ll be redirected to WhatsApp, where our team will assist you with pricing and customization options.",
+      "Getting the best prices is easy! Just hit the 'Book Now' button on your desired package, and you’ll be whisked away to WhatsApp, where our team will assist you with pricing and customization options.",
   },
   {
     id: 7,
     question: "How does the booking process work?",
     answer:
-      "Booking your event package is simple: Browse through the available packages on our website, select a package that fits your event needs, click on 'Request Quote' to connect with us on WhatsApp, share your event details, and we’ll provide you with pricing and availability. Confirm your booking with us, and we’ll handle the rest!",
+      "Booking your dream event package is a breeze: Browse our fabulous packages, select the one that speaks to you, click 'Book Now' to chat with us on WhatsApp, share your event details, and we’ll handle the rest!",
   },
   {
     id: 8,
     question: "Can I customize the packages?",
     answer:
-      "Yes, we offer customizable options within our packages to meet your specific requirements. Just let us know your preferences when you reach out via WhatsApp.",
+      "Absolutely! We love making your vision come to life. Just let us know your preferences when you reach out via WhatsApp, and we’ll tailor the package to fit your needs.",
   },
   {
     id: 9,
     question: "How early should I book my package?",
     answer:
-      "We recommend booking your package at least 2-3 weeks in advance to ensure availability and timely arrangements.",
+      "To ensure you get everything you want, we recommend booking at least 2-3 weeks in advance. Let’s secure your spot and make magic happen!",
   },
   {
     id: 10,
     question: "Who handles the delivery and setup of the materials?",
     answer:
-      "Our vendor partners take care of the delivery and setup for your event, ensuring everything is ready on time.",
+      "Our amazing vendor partners take care of all the delivery and setup, ensuring everything is perfectly ready for your event. You just enjoy the celebration!",
   },
   {
     id: 11,
     question: "Is there an additional charge for delivery and setup?",
     answer:
-      "Delivery and setup charges depend on the package and location. These details will be shared with you during the quote discussion on WhatsApp.",
+      "Delivery and setup charges vary based on your package and location. We’ll share all the details during your quote discussion on WhatsApp.",
   },
   {
     id: 12,
     question: "How do I make a payment?",
     answer:
-      "Payments can be made online or via bank transfer after confirming the quote and booking details.",
+      "Payments can be made online or via bank transfer once you confirm your quote and booking details. Easy peasy!",
   },
   {
     id: 13,
     question: "What is your cancellation policy?",
     answer:
-      "Cancellation policies vary by vendor. Once you book a package, we’ll share the vendor’s cancellation terms with you.",
+      "Cancellation policies differ by vendor. Once you book, we’ll provide you with the vendor’s cancellation terms to keep you informed.",
   },
   {
     id: 14,
     question: "How can I contact you for further assistance?",
     answer:
-      "You can reach us via the 'Request Quote' button on our website, which connects you directly to our WhatsApp support team.",
+      "Need help? Just click the 'Chat with us' button on our website, and you’ll connect directly with our friendly WhatsApp support team!",
   },
   {
     id: 15,
     question: "What if I need help choosing a package?",
     answer:
-      "Our team is here to assist! Click 'Request Quote' and share your event details on WhatsApp. We’ll guide you to the best package for your needs.",
+      "We’re here for you! Click 'Book a call' and share your event details on WhatsApp. Our team will guide you to the perfect package for your celebration.",
   },
   {
     id: 16,
     question: "Will you be adding more features in the future?",
     answer:
-      "Yes! We plan to introduce individual rentals, additional categories, and an integrated app to make your event planning experience even smoother.",
+      "Absolutely! We’re excited to roll out individual rentals, new categories, and an integrated app to enhance your event planning experience even further.",
   },
   {
     id: 17,
     question: "How can I stay updated on your services?",
     answer:
-      "Follow us on social media or bookmark our website for the latest updates and offerings.",
+      "Follow us on social media or bookmark our website for the latest updates, offers, and all things fabulous!",
   },
 ];
 
@@ -125,10 +125,10 @@ export default function FAQ() {
         transition={{ duration: 0.5 }}
       >
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold text-center mb-2">
+          <h1 className="text-3xl font-bold text-center mb-2 font-poppins">
             Frequently Asked Questions
           </h1>
-          <p className="text-gray-600 text-center mb-8">
+          <p className="text-gray-600 text-center mb-8 font-poppins">
             Find answers to common questions about our rental services
           </p>
 

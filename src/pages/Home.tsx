@@ -1,10 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import {
   ArrowRight,
+  CalendarCheck2,
   CheckCircle,
   Clock,
   Headphones,
   Lightbulb,
+  ListChecksIcon,
   MessageCircle,
   Music,
   PartyPopper,
@@ -127,10 +129,10 @@ export default function Home() {
                 className="flex flex-wrap gap-4"
               >
                 <Link
-                  to="/category"
+                  to="/events"
                   className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-gray-900 transition-all hover:bg-gray-100"
                 >
-                  Browse Equipment
+                  Browse Events
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
 
@@ -153,7 +155,7 @@ export default function Home() {
       <ScrollAnimation>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Our Equipment Categories
+            Our Package Categories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <CategoryCard
@@ -178,8 +180,15 @@ export default function Home() {
               link="/category/decor"
             />
             <CategoryCard
-              icon={<PartyPopper className="h-8 w-8" />}
+              icon={<ListChecksIcon className="h-8 w-8" />}
               title="View All Categories"
+              description=""
+              image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+              link="/category"
+            />
+            <CategoryCard
+              icon={<CalendarCheck2 className="h-8 w-8" />}
+              title="View All Events"
               description=""
               image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
               link="/category"

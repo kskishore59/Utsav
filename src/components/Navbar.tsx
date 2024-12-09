@@ -1,4 +1,12 @@
-import { HelpCircle, Menu, Package, Search, X } from "lucide-react";
+import {
+  CalendarCheck2,
+  HelpCircle,
+  Menu,
+  Package,
+  PartyPopper,
+  Search,
+  X,
+} from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import { useStore } from "../store";
@@ -17,7 +25,6 @@ export default function Navbar() {
     const query = e.target.value;
 
     setSearchQuery(query);
-    console.log(searchQuery);
 
     if (query.trim() === "") {
       setSearchResults([]);
@@ -28,7 +35,13 @@ export default function Navbar() {
       const searchTerm = query.toLowerCase();
       return (
         product.name.toLowerCase().includes(searchTerm) ||
-        product.category.toLowerCase().includes(searchTerm)
+        product.category.toLowerCase().includes(searchTerm) ||
+        product.idealFor
+          .map((item) => item.toLowerCase())
+          .includes(searchTerm.toLowerCase())
+        // product.idealFor.map((each) =>
+        //   each.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+        // )
         // product.description.toLowerCase().includes(searchTerm)
       );
     }).slice(0, 5);
@@ -120,11 +133,11 @@ export default function Navbar() {
               <span>All Categories</span>
             </Link>
             <Link
-              to="/products"
+              to="/events"
               className="flex items-center space-x-1 text-gray-600 hover:text-indigo-600"
             >
-              <Package className="h-5 w-5" />
-              <span>All Products</span>
+              <CalendarCheck2 className="h-5 w-5" />
+              <span>All Events</span>
             </Link>
             <Link
               to="/faq"
@@ -245,11 +258,11 @@ export default function Navbar() {
               All Categories
             </Link>
             <Link
-              to="/products"
+              to="/events"
               className="block px-3 py-2 text-gray-600 transition-colors duration-200 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg"
               onClick={handleNavClick}
             >
-              All Products
+              All Events
             </Link>
             <Link
               to="/faq"

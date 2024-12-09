@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 function ProductDetail() {
   const { id } = useParams();
   const product = PRODUCTS.find((p) => p.id === id);
-  console.log(product);
 
   if (!product) {
     return <div className="container mx-auto px-4 py-8">Product not found</div>;
@@ -45,7 +44,7 @@ function ProductDetail() {
           transition={{ delay: 0.3 }}
           className="space-y-6"
         >
-          <h1 className="text-4xl font-semibold text-gray-800 font-poppins">
+          <h1 className="text-3xl font-semibold text-gray-800 font-poppins">
             {product.name}
           </h1>
           <p className="text-2xl font-semibold text-indigo-600">

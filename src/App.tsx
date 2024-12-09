@@ -13,15 +13,15 @@ import FAQ from "./pages/FAQ";
 import Orders from "./pages/Orders";
 import { initScrollbarBehavior } from "./utils/scrollbar";
 import AllCategories from "./pages/AllCategories";
-import AllProducts from "./pages/Categories";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ReactGA from "react-ga4";
+import AllEvents from "./pages/AllEvents";
+import Events from "./pages/Events";
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));
-const Categories = lazy(() => import("./pages/Categories"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 const Category = lazy(() => import("./pages/Category"));
 const Navbar = lazy(() => import("./components/Navbar"));
@@ -62,11 +62,13 @@ const AppContent = memo(() => {
             <Routes>
               <Route path="/*" element={<Home />} />
               <Route path="/category" element={<AllCategories />} />
-              <Route path="/products" element={<AllProducts />} />
+
               <Route path="/products/:id" element={<ProductDetail />} />
               <Route path="/category/:category" element={<Category />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/events" element={<AllEvents />} />
+              <Route path="/events/:id" element={<Events />} />
               <Route
                 path="/terms-and-conditions"
                 element={<TermsAndConditions />}

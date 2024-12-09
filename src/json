@@ -1,0 +1,119 @@
+// ... existing code ...
+
+  // SOUND CATEGORY - DJ SETUPS
+  {
+    id: "sound-dj-1",
+    name: "DJ Setup Single Bin",
+    // Updated description
+    description:
+      "Elevate your event with our DJ Setup Single Bin, perfect for creating unforgettable memories at gatherings of up to 200 people.",
+    // Updated specifications
+    specifications: [
+      "2000W RMS total output for powerful sound",
+      "12-channel mixing console for seamless mixing",
+      "2 top speakers with stands for optimal sound distribution",
+      "2 subwoofers for deep bass",
+      "Professional DJ console with advanced features",
+      "Basic LED lighting setup to enhance the atmosphere",
+      "All necessary cables and connections included",
+      "Backup power solutions for uninterrupted fun",
+    ],
+  },
+  {
+    id: "sound-dj-2",
+    name: "DJ Setup Double Bin",
+    // Updated description
+    description:
+      "Unleash the party with our DJ Setup Double Bin, designed for large events and weddings, ensuring an electrifying experience for up to 500 guests.",
+    // Updated specifications
+    specifications: [
+      "4000W RMS total output for booming sound",
+      "16-channel mixing console for professional mixing",
+      "4 top speakers with stands for expansive sound coverage",
+      "4 subwoofers for heart-thumping bass",
+      "Professional DJ console with effects for creative mixing",
+      "Advanced LED lighting system to dazzle your guests",
+      "Wireless microphones (2) for seamless announcements",
+      "Complete cable management for a tidy setup",
+      "Backup equipment included for peace of mind",
+    ],
+  },
+
+  // DECOR CATEGORY - SPECIAL EFFECTS
+  {
+    id: "decor-fx-1",
+    name: "CO2 Jets",
+    // Updated description
+    description:
+      "Ignite the excitement with our CO2 Jets, delivering high-impact effects that will leave your guests in awe during dramatic moments.",
+    // Updated specifications
+    specifications: [
+      "Set of 4 CO2 jets for maximum impact",
+      "DMX controlled system for precise operation",
+      "CO2 cylinder included for hassle-free use",
+      "Professional operator to ensure flawless execution",
+      "30-second continuous blast capability for stunning displays",
+      "Wireless remote control for easy operation",
+      "Safety barriers included for guest safety",
+    ],
+  },
+  {
+    id: "decor-fx-2",
+    name: "Cold Fire Package",
+    // Updated description
+    description:
+      "Create a mesmerizing atmosphere with our Cold Fire Package, offering stunning fire displays that are safe for indoor use.",
+    // Updated specifications
+    specifications: [
+      "6 cold fire units for breathtaking effects",
+      "DMX controller included for easy management",
+      "Trained operator to ensure safety and quality",
+      "Safety equipment provided for peace of mind",
+      "Indoor and outdoor compatible for versatile use",
+      "Multiple firing patterns for varied displays",
+      "Emergency shutdown system for added safety",
+    ],
+  },
+
+  // ARTISTS CATEGORY
+  {
+    id: "artist-1",
+    name: "Bridal Makeup Package",
+    // Updated description
+    description:
+      "Transform into a vision of beauty with our Bridal Makeup Package, tailored to make your special day unforgettable.",
+    // Updated specifications
+    specifications: [
+      "HD makeup application for a flawless look",
+      "Professional hair styling to complement your attire",
+      "Saree or outfit draping for a perfect finish",
+      "False lashes included for added glamour",
+      "Touch-up kit provided for all-day perfection",
+      "Trial session available to ensure your dream look",
+      "Premium branded products used for quality assurance",
+      "Assistant makeup artist included for personalized service",
+    ],
+  },
+
+  // TRANSPORTATION CATEGORY
+  {
+    id: "transport-1",
+    name: "Premium Wedding Car",
+    // Updated description
+    description:
+      "Arrive in style with our Premium Wedding Car service, featuring luxury vehicles and professional chauffeurs for a royal experience.",
+    // Updated specifications
+    specifications: [
+      "Premium sedan (Mercedes/BMW/Audi/Jaguar) for elegance",
+      "Professional uniformed chauffeur for a classy touch",
+      "Basic floral decoration included for a festive feel",
+      // "Red carpet service for a grand entrance",
+      "Fully air-conditioned for comfort",
+      "Complimentary water bottles for your convenience",
+      // "Fuel included for standard duration",
+      "Insurance coverage included for peace of mind",
+      "Backup vehicle on standby for emergencies",
+    ],
+  },
+
+// ... existing code ...

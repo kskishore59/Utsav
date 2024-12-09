@@ -1,5 +1,6 @@
 interface Product {
   id: string;
+  idealFor: string[];
   name: string;
   category: string;
   subCategory: string;

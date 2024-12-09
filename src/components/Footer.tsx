@@ -20,7 +20,7 @@ export default function Footer() {
               <img
                 src="/utsav-footer-logo-1.png"
                 alt="logo"
-                style={{ height: "5rem", width: "15rem", marginLeft: "0px" }}
+                style={{ height: "2.5rem", width: "8rem", marginLeft: "0px" }}
               />
             </div>
             <p className="text-gray-400 leading-relaxed">
