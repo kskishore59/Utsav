@@ -1,24 +1,23 @@
 import { lazy, memo, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import AdminRoute from "./components/AdminRoute";
-
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { PerformanceProvider } from "./context/PerformanceContext";
 import { AuthProvider } from "./hooks/useAuth";
 import AdminLogin from "./pages/admin/Login";
 import ProductForm from "./pages/admin/ProductForm";
 import AdminProducts from "./pages/admin/Products";
+import AllCategories from "./pages/AllCategories";
+import AllEvents from "./pages/AllEvents";
 import Checkout from "./pages/Checkout";
+import Events from "./pages/Events";
 import FAQ from "./pages/FAQ";
 import Orders from "./pages/Orders";
-import { initScrollbarBehavior } from "./utils/scrollbar";
-import AllCategories from "./pages/AllCategories";
-import { ErrorBoundary } from "./components/ErrorBoundary";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import { initScrollbarBehavior } from "./utils/scrollbar";
 import ReactGA from "react-ga4";
-import AllEvents from "./pages/AllEvents";
-import Events from "./pages/Events";
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));
@@ -116,9 +115,10 @@ AppContent.displayName = "AppContent";
 const preloadRoutes = () => {
   const routes = [
     () => import("./pages/Home"),
-    () => import("./pages/Categories"),
     () => import("./pages/ProductDetail"),
     () => import("./pages/Category"),
+    () => import("./pages/AllCategories"),
+    () => import("./pages/AllEvents"),
   ];
   routes.forEach((route) => route());
 };
@@ -126,33 +126,33 @@ const preloadRoutes = () => {
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   // Initialize Google Analytics
-  //   ReactGA.initialize("G-33FZLJVGCD");
-  // }, []);
+  useEffect(() => {
+    // Initialize Google Analytics
+    ReactGA.initialize("G-33FZLJVGCD");
+  }, []);
 
-  // useEffect(() => {
-  //   // Track page views
-  //   ReactGA.send({
-  //     hitType: "pageview",
-  //     page: location.pathname,
-  //   });
+  useEffect(() => {
+    // Track page views
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname,
+    });
 
-  //   // Optional: Track exit pages
-  //   const handleBeforeUnload = () => {
-  //     ReactGA.send({
-  //       hitType: "event",
-  //       eventCategory: "User",
-  //       eventAction: "Exit Page",
-  //       eventLabel: location.pathname,
-  //     });
-  //   };
+    // Optional: Track exit pages
+    const handleBeforeUnload = () => {
+      ReactGA.send({
+        hitType: "event",
+        eventCategory: "User",
+        eventAction: "Exit Page",
+        eventLabel: location.pathname,
+      });
+    };
 
-  //   window.addEventListener("beforeunload", handleBeforeUnload);
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handleBeforeUnload);
-  //   };
-  // }, [location]);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [location]);
 
   useEffect(() => {
     // Preload routes when idle
