@@ -73,6 +73,7 @@ export default function Category() {
             image={product.image[0]}
             title={product.name}
             description={product.description}
+            category={product.category}
             price={product.price}
             onClick={() => window.open(createWhatsAppLink(product), "_blank")}
           />

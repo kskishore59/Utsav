@@ -70,6 +70,7 @@ export default function Events() {
               href={`/products/${product.id}`} // Changed from /products to /products
               image={product.image[0]} // Changed from product.image to product.image
               title={product.name}
+              category={product.category}
               price={product.price}
               description={product.description}
               onClick={() => window.open(createWhatsAppLink(product), "_blank")}
