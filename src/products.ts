@@ -1,4 +1,7 @@
+import { base } from "framer-motion/client";
 import { Product } from "./types";
+
+const baseUrl = "https://myutsav.s3.ap-south-1.amazonaws.com";
 
 export const PRODUCTS: Product[] = [
   // Decor Products
@@ -16,18 +19,24 @@ export const PRODUCTS: Product[] = [
       standard: "Full Wedding Day",
     },
     description:
-      "Complete wedding decoration package with elegant themes and setups.",
+      "Complete wedding decoration package with elegant themes and setups, tailored to create a memorable atmosphere for your special day.",
     specifications: [
       "Floral arrangements",
       "Stage setup",
       "Lighting decorations",
-      "Seating arrangements",
+      "Seating arrangements on stage",
       "Thematic decor elements",
+      "Table centerpieces",
+      "Backdrop designs",
+      "Setup and travel charges included",
+      "Additional items can be accommodated upon request",
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Wedding-image-4.jpg`,
+      `${baseUrl}/Wedding-image-2.jpg`,
+      `${baseUrl}/Wedding-image-3.jpg`,
+      `${baseUrl}/Wedding-image-1.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -46,14 +55,21 @@ export const PRODUCTS: Product[] = [
     description: "Beautifully designed decor for engagement ceremonies.",
     specifications: [
       "Floral backdrops",
-      "Seating arrangements",
+      "Seating arrangements for couple",
       "Lighting setups",
       "Thematic decor elements",
+      "Setup and travel charges included",
+      "Additional items can be accommodated upon request",
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Engagement-image-2.jpg`,
+      `${baseUrl}/Engagement-image-1.jpg`,
+      `${baseUrl}/Engagement-image-3.jpg`,
+      `${baseUrl}/Reception-image-1.jpg`,
+      `${baseUrl}/Reception-image-2.jpg`,
+      `${baseUrl}/Reception-image-3.jpg`,
+      `${baseUrl}/Engagement-image-4.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -73,10 +89,12 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://i.postimg.cc/jS81v02C/Snapinsta-app-432075118-1598052097626704-9076143774487201249-n-1080.jpg",
-      "https://i.postimg.cc/66RZStdQ/Basic-in-house-Mehndi-backdrop-decor.jpg",
-      "https://i.postimg.cc/4y4YgxhQ/def82651-f974-40f3-b528-9f50e0a2207c.jpg",
-      "https://i.postimg.cc/44wK1VrL/c8f80ca3-8587-433c-8925-e6f5c16f1123.jpg",
+      `${baseUrl}/Haldi-image-6.jpg`,
+      `${baseUrl}/Haldi-image-1.jpg`,
+      `${baseUrl}/Haldi-image-2.jpg`,
+      `${baseUrl}/Haldi-image-3.jpg`,
+      `${baseUrl}/Haldi-image-4.jpg`,
+      `${baseUrl}/Haldi-image-5.jpg`,
     ],
     description:
       "Complete Haldi ceremony decoration with traditional elements.",
@@ -113,11 +131,16 @@ export const PRODUCTS: Product[] = [
       "Seating arrangements",
       "Floral decorations",
       "Lighting setups",
+      "Cusions as per theme",
+      "Setup and travel charges included",
+      "Additional items can be accommodated upon request",
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Mehendi-decor-2.jpg`,
+      `${baseUrl}/Mehendi-decor-3.jpg`,
+      `${baseUrl}/Mehendi-decor-4.jpg`,
+      `${baseUrl}/Mehendi-decor-1.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -143,8 +166,14 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Reception-image-4.jpg`,
+      `${baseUrl}/Reception-image-1.jpg`,
+      `${baseUrl}/Reception-image-2.jpg`,
+      `${baseUrl}/Reception-image-3.jpg`,
+      `${baseUrl}/Engagement-image-2.jpg`,
+      `${baseUrl}/Engagement-image-1.jpg`,
+      `${baseUrl}/Engagement-image-3.jpg`,
+      `${baseUrl}/Engagement-image-4.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -170,8 +199,10 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Birthday-decor-image-1.jpg`,
+      `${baseUrl}/Birthday-decor-image-2.jpg`,
+      `${baseUrl}/Birthday-decor-image-3.jpg`,
+      `${baseUrl}/Birthday-decor-image-4.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -260,7 +291,7 @@ export const PRODUCTS: Product[] = [
     name: "House Warming Decor",
     category: "decor",
     subCategory: "House Warming",
-    price: 25000,
+    price: 9999,
     setupCharges: 5000,
     deliveryCharges: 2000,
     rentalDuration: {
@@ -269,15 +300,20 @@ export const PRODUCTS: Product[] = [
     },
     description: "Traditional decor for house warming ceremonies.",
     specifications: [
+      "Traditional decorations",
       "Floral arrangements",
-      "Traditional seating",
       "Decorative elements",
-      "Lighting arrangements",
+      "Lighting arrangements as per needed",
+      "Customization available upon request",
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/House-warming-decor-image-1.jpg`,
+      `${baseUrl}/House-warming-decor-image-2.jpg`,
+      `${baseUrl}/House-warming-decor-image-3.jpg`,
+      `${baseUrl}/House-warming-decor-image-4.jpg`,
+      `${baseUrl}/House-warming-decor-image-5.jpg`,
+      `${baseUrl}/House-warming-decor-image-6.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -507,7 +543,14 @@ export const PRODUCTS: Product[] = [
   // SOUND CATEGORY - DJ SETUPS
   {
     id: "sound-dj-1",
-    idealFor: ["Birthdays", "Small parties", "Anniversary", "Private Parties"],
+    idealFor: [
+      "Weddings",
+      "Reception",
+      "Birthdays",
+      "Small parties",
+      "Anniversary",
+      "Private Parties",
+    ],
     name: "DJ Setup Single Bin",
     category: "sound",
     subCategory: "DJ's Setup",
@@ -684,10 +727,7 @@ export const PRODUCTS: Product[] = [
       "Full-Length Reception Video",
     ],
     available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ],
+    image: [`${baseUrl}/Reception-image-1.jpg`],
   },
   {
     id: "pre-wedding-cinematic",
@@ -715,8 +755,9 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Pre-wedding-shoot-image-2.jpg`,
+      `${baseUrl}/Pre-wedding-shoot-image-1.jpg`,
+      `${baseUrl}/Pre-wedding-shoot-image-3.jpg`,
     ],
   },
   {
@@ -1058,7 +1099,7 @@ export const PRODUCTS: Product[] = [
 
   {
     id: "artist-mehendi-1",
-    idealFor: ["Weddings", "Sangeeth", "Birthdays", "Haldi"],
+    idealFor: ["Weddings", "Sangeeth", "Birthdays", "Haldi", "Mehendi"],
     name: "Premium Bridal Mehendi",
     category: "artists",
     subCategory: "Mehendi",
@@ -1072,8 +1113,11 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1630779374222-d8fc71997efb?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604430456280-43f652c497aa?auto=format&fit=crop&q=80",
+      `${baseUrl}/Mehendi-image-3.jpg`,
+      `${baseUrl}/Mehendi-image-2.jpg`,
+
+      `${baseUrl}/Mehendi-image-4.jpg`,
+      `${baseUrl}/Mehendi-image-1.jpg`,
     ],
     description: "Premium bridal mehendi service with exclusive designs.",
     specifications: [
@@ -1152,7 +1196,9 @@ export const PRODUCTS: Product[] = [
     },
     image: [
       "https://i.postimg.cc/hG3Fg9tG/wedding-car-one.jpg",
-      "https://i.postimg.cc/hG3Fg9tG/wedding-car-one.jpg",
+      `${baseUrl}/Wedding-car-image-1.jpg`,
+      `${baseUrl}/Wedding-car-image-2.jpg`,
+      `${baseUrl}/Wedding-car-image-3.jpg`,
     ],
     description:
       "Arrive in style with our Premium Wedding Car service, featuring luxury vehicles and professional chauffeurs for a royal experience.",
@@ -1318,14 +1364,16 @@ export const PRODUCTS: Product[] = [
       "A complete live band setup featuring professional sound equipment, ideal for concerts, events, and performances.",
     specifications: [
       "16-Channel Digital Mixer",
-      "Full Drum Kit Microphone Set",
-      "4 Wireless Microphones",
-      "4 Stage Monitors",
+      "Wireless Microphones",
+      "Wired Microphones",
+      "Stage Monitors",
       "Main Speakers with Amplifiers",
       "DI Boxes for Instruments",
       "Comprehensive Cable Management",
       "Professional Sound Engineer Included",
       "Backup Equipment Available",
+      "Stage setup also included",
+      "Customization available",
       "Setup Time: Approximately 3 Hours",
     ],
     available: true,
@@ -1617,8 +1665,9 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/House+Lighting+Decor+-3.jpg`,
+      `${baseUrl}/House+Lighting+Decor.jpg`,
+      `${baseUrl}/House+Lighting+Decor+-2.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -1713,8 +1762,10 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Venue-lighting-image-1.jpg`,
+      `${baseUrl}/Venue-lighting-image-3.jpg`,
+      `${baseUrl}/Venue-lighting-image-4.jpg`,
+      `${baseUrl}/Venue-lighting-image-2.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -1782,3 +1833,5 @@ export const PRODUCTS: Product[] = [
     ], // Replace with actual image URL
   },
 ];
+
+//Welcome to Utsav, where we redefine event planning! Our mission is to make organizing unforgettable celebrations a breeze without compromising on quality or flair. Choose from our customizable event packages that cover everything from sound & visuals to decor, photography, transportation, artists, and supporting staff. While our prices reflect the premium quality of our services, once you experience Utsav, you’ll keep coming back for more! We carefully select a limited number of trusted vendors to ensure the best service and seamless coordination. Enjoy your special moments with family and friends while we handle the rest. Your satisfaction is our top priority, and we welcome your feedback to help us grow and improve. Let's make your next event magical together!

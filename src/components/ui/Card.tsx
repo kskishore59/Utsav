@@ -9,6 +9,7 @@ interface CardProps {
   description: string;
   category: string;
   price: number;
+  displayPill: boolean;
   onClick?: () => void;
   className?: string;
 }
@@ -32,6 +33,7 @@ export function Card({
   description,
   category,
   price,
+  displayPill,
   onClick,
   className = "",
 }: CardProps) {
@@ -84,7 +86,7 @@ export function Card({
                 <br />₹{price}
               </p>
             )}
-            {category && (
+            {displayPill && category && (
               <span
                 className={`inline-flex mt-3 items-center justify-center text-black text-xs font-500 font-poppins px-2 py-0.5 rounded-lg h-5 w-auto ${
                   categoryColors[category.toLowerCase()]

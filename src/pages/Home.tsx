@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import {
   ArrowRight,
   CalendarCheck2,
+  CameraIcon,
   CheckCircle,
   Clock,
   Headphones,
@@ -159,6 +160,20 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <CategoryCard
+              icon={<PartyPopper className="h-8 w-8" />}
+              title="Event Decor"
+              description="Stunning decorations for any occasion"
+              image="https://myutsav.s3.ap-south-1.amazonaws.com/Reception-image-4.jpg"
+              link="/category/decor"
+            />
+            <CategoryCard
+              icon={<CameraIcon className="h-8 w-8" />}
+              title="Photography"
+              description="Capture your moments with our professional photography services"
+              image="/Photography-main-image-2.jpg"
+              link="/category/photography"
+            />
+            <CategoryCard
               icon={<Music className="h-8 w-8" />}
               title="Sound Systems"
               description="Professional audio equipment for any venue size"
@@ -172,13 +187,7 @@ export default function Home() {
               image="sharpies-two.jpg"
               link="/category/light"
             />
-            <CategoryCard
-              icon={<PartyPopper className="h-8 w-8" />}
-              title="Event Decor"
-              description="Stunning decorations for any occasion"
-              image="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80"
-              link="/category/decor"
-            />
+
             <CategoryCard
               icon={<ListChecksIcon className="h-8 w-8" />}
               title="View All Categories"
@@ -190,7 +199,8 @@ export default function Home() {
               icon={<CalendarCheck2 className="h-8 w-8" />}
               title="View All Events"
               description=""
-              image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+              image="/
+              event-two.jpeg"
               link="/events"
             />
           </div>

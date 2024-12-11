@@ -72,6 +72,7 @@ export default function Events() {
               title={product.name}
               category={product.category}
               price={product.price}
+              displayPill={true}
               description={product.description}
               onClick={() => window.open(createWhatsAppLink(product), "_blank")}
             />

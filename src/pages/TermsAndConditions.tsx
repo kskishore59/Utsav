@@ -69,6 +69,30 @@ const TermsAndConditions = () => {
           If you have any questions or concerns regarding these terms, please
           reach out to us through our contact page. We're here to help!
         </p>
+
+        <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+          Important Information
+        </h2>
+        <div className="text-gray-700 mb-4">
+          <p>1. An advance payment is required to confirm your booking.</p>
+          <p>
+            2. The second half payment is to be made at the venue before the
+            event.
+          </p>
+          <p>
+            3. Please note that any damage costs incurred during the rental
+            period will be charged accordingly.
+          </p>
+          <p>
+            4. Cancellations made less than 48 hours before the event will incur
+            a 50% cancellation fee.
+          </p>
+          <p>5. All rentals are subject to availability and confirmation.</p>
+          <p>
+            6. Please ensure that all items are returned in the same condition
+            as received.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -9,42 +9,44 @@ const EVENTS = [
   {
     id: "weddings",
     name: "Wedding",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image: "https://myutsav.s3.ap-south-1.amazonaws.com/Wedding-photo-1.jpg",
     description:
       "Celebrate the magical union of two souls destined to be together forever!",
   },
   {
     id: "engagement",
     name: "Engagement",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image: "/Engagement-main-image-2.jpg",
     description:
       "A heartfelt celebration of love and commitment, marking the beginning of a beautiful journey!",
   },
   {
     id: "haldi",
     name: "Haldi / Mangalasnanam",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image: "https://myutsav.s3.ap-south-1.amazonaws.com/Haldi-image-8.jpg",
     description:
       "Embrace the tradition with vibrant colors and joyous laughter at this pre-wedding ceremony!",
   },
   {
     id: "mehendi",
     name: "Mehendi",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image: "https://myutsav.s3.ap-south-1.amazonaws.com/Mehendi-image-4.jpg",
     description:
       "Adorn your hands with intricate henna designs in a fun-filled and festive atmosphere!",
   },
   {
     id: "reception",
     name: "Reception",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image:
+      "https://myutsav.s3.ap-south-1.amazonaws.com/Reception-main-image.jpg",
     description:
       "Join us for a grand celebration filled with joy, love, and unforgettable moments post-wedding!",
   },
   {
     id: "birthday",
     name: "Birthday",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image:
+      "https://myutsav.s3.ap-south-1.amazonaws.com/Birthday-decor-image-2.jpg",
     description:
       "Celebrate another fabulous year of life with joy, laughter, and cake galore!",
   },
@@ -58,19 +60,21 @@ const EVENTS = [
   {
     id: "sangeeth",
     name: "Sangeeth",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image:
+      "https://myutsav.s3.ap-south-1.amazonaws.com/Sangeeth-setup-image-1.jpg",
     description:
       "Dance the night away in a musical celebration, filled with laughter and unforgettable performances!",
   },
   {
-    id: "house_warming",
+    id: "house warming",
     name: "House Warming",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image:
+      "https://myutsav.s3.ap-south-1.amazonaws.com/House-warming-image-2.jpg",
     description:
       "Welcome warmth and joy into your new abode with a delightful housewarming party!",
   },
   {
-    id: "private_parties",
+    id: "private parties",
     name: "Private Parties",
     image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
     description:
@@ -162,7 +166,7 @@ export default function AllEvents() {
                 onClick={() => navigate(`/events/${event.id}`)}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <div className="relative overflow-hidden rounded-lg shadow-lg bg-white">
+                <div className="relative overflow-hidden rounded-lg  shadow-lg bg-white">
                   <div className="relative h-64">
                     <motion.img
                       src={event.image}
@@ -174,7 +178,7 @@ export default function AllEvents() {
                       transition={{ duration: 0.5 }}
                       aria-placeholder="blur"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 group-hover:bg-opacity-30" />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-30" />
                   </div>
 
                   <motion.div

@@ -74,6 +74,7 @@ export default function Category() {
             title={product.name}
             description={product.description}
             category={product.category}
+            displayPill={false}
             price={product.price}
             onClick={() => window.open(createWhatsAppLink(product), "_blank")}
           />
