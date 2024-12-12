@@ -185,7 +185,7 @@ export const PRODUCTS: Product[] = [
     name: "Birthday Decor - Themed Base",
     category: "decor",
     subCategory: "Birthday",
-    price: 15000,
+    price: 14999,
     setupCharges: 2000,
     deliveryCharges: 1000,
     rentalDuration: {
@@ -202,10 +202,11 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      `${baseUrl}/Birthday-decor-image-1.jpg`,
+      `${baseUrl}/Birthday-decor-image-6.jpg`,
       `${baseUrl}/Birthday-decor-image-2.jpg`,
       `${baseUrl}/Birthday-decor-image-3.jpg`,
       `${baseUrl}/Birthday-decor-image-4.jpg`,
+      `${baseUrl}/Birthday-decor-image-1.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -214,7 +215,7 @@ export const PRODUCTS: Product[] = [
     name: "Birthday Decor - Generic",
     category: "decor",
     subCategory: "Birthday",
-    price: 10000,
+    price: 7999,
     setupCharges: 1500,
     deliveryCharges: 800,
     rentalDuration: {
@@ -226,13 +227,16 @@ export const PRODUCTS: Product[] = [
     specifications: [
       "Colorful decorations",
       "Balloons and streamers",
-      "Seating arrangements",
       "Lighting setups",
+      "Setup and travel charges included",
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Birthday-decor-generic-image-2.jpg`,
+      `${baseUrl}/Birthday-decor-generic-image-3.jpg`,
+      `${baseUrl}/Birthday-decor-generic-image-4.jpg`,
+      `${baseUrl}/Birthday-decor-generic-image-1.jpg`,
+      `${baseUrl}/Birthday-decor-generic-image-5.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -241,7 +245,7 @@ export const PRODUCTS: Product[] = [
     name: "Anniversary Decor",
     category: "decor",
     subCategory: "Anniversary",
-    price: 40000,
+    price: 11999,
     setupCharges: 8000,
     deliveryCharges: 4000,
     rentalDuration: {
@@ -259,32 +263,32 @@ export const PRODUCTS: Product[] = [
     available: true,
     image: [`${baseUrl}/25th Anniversary.jpg`], // Replace with actual image URL
   },
-  {
-    id: "decor-sangeeth",
-    idealFor: ["Sangeeth"],
-    name: "Sangeeth Decor",
-    category: "decor",
-    subCategory: "Sangeeth",
-    price: 35000,
-    setupCharges: 7000,
-    deliveryCharges: 3000,
-    rentalDuration: {
-      minimum: "6 hours",
-      standard: "Sangeeth Night",
-    },
-    description: "Vibrant decor for Sangeeth ceremonies with musical themes.",
-    specifications: [
-      "Colorful drapes",
-      "Stage setup",
-      "Lighting arrangements",
-      "Seating arrangements",
-    ],
-    available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
-  },
+  // {
+  //   id: "decor-sangeeth",
+  //   idealFor: ["Sangeeth"],
+  //   name: "Sangeeth Decor",
+  //   category: "decor",
+  //   subCategory: "Sangeeth",
+  //   price: 35000,
+  //   setupCharges: 7000,
+  //   deliveryCharges: 3000,
+  //   rentalDuration: {
+  //     minimum: "6 hours",
+  //     standard: "Sangeeth Night",
+  //   },
+  //   description: "Vibrant decor for Sangeeth ceremonies with musical themes.",
+  //   specifications: [
+  //     "Colorful drapes",
+  //     "Stage setup",
+  //     "Lighting arrangements",
+  //     "Seating arrangements",
+  //   ],
+  //   available: true,
+  //   image: [
+  //     "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+  //     "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   ], // Replace with actual image URL
+  // },
   {
     id: "decor-house-warming",
     idealFor: ["House Warming"],
@@ -340,38 +344,35 @@ export const PRODUCTS: Product[] = [
       "Thematic decor elements",
     ],
     available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
+    image: [`${baseUrl}/Cradle-cermony-image-1.jpg`], // Replace with actual image URL
   },
-  {
-    id: "decor-pooja",
-    idealFor: ["Pooja", "Festivals"],
-    name: "Pooja Decor",
-    category: "decor",
-    subCategory: "Pooja",
-    price: 15000,
-    setupCharges: 3000,
-    deliveryCharges: 1000,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "Pooja Ceremony",
-    },
-    description:
-      "Traditional decor for Pooja ceremonies, creating a serene atmosphere.",
-    specifications: [
-      "Floral arrangements",
-      "Traditional seating",
-      "Decorative elements",
-      "Lighting arrangements",
-    ],
-    available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
-  },
+  // {
+  //   id: "decor-pooja",
+  //   idealFor: ["Pooja", "Festivals"],
+  //   name: "Pooja Decor",
+  //   category: "decor",
+  //   subCategory: "Pooja",
+  //   price: 15000,
+  //   setupCharges: 3000,
+  //   deliveryCharges: 1000,
+  //   rentalDuration: {
+  //     minimum: "4 hours",
+  //     standard: "Pooja Ceremony",
+  //   },
+  //   description:
+  //     "Traditional decor for Pooja ceremonies, creating a serene atmosphere.",
+  //   specifications: [
+  //     "Floral arrangements",
+  //     "Traditional seating",
+  //     "Decorative elements",
+  //     "Lighting arrangements",
+  //   ],
+  //   available: true,
+  //   image: [
+  //     "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+  //     "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   ], // Replace with actual image URL
+  // },
   // Sound Products
   {
     id: "sound-package-1",
@@ -414,8 +415,7 @@ export const PRODUCTS: Product[] = [
       standard: "8 hours",
     },
     image: [
-      "https://example.com/image/sound-package-2-1.jpg", // Replace with actual image URLs
-      "https://example.com/image/sound-package-2-2.jpg",
+      `${baseUrl}/Premium-sound-and-lighting-for-small-events-image-1.jpg`,
     ],
     description:
       "A comprehensive sound and lighting solution designed for indoor events accommodating up to 100 guests, ensuring an unforgettable experience.",
@@ -433,117 +433,6 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
   },
-  {
-    id: "sound-package-3",
-    idealFor: ["Fests", "Sangeeth", "Reception", "Others"],
-    name: "Elite Sound and Lighting Package",
-    category: "sound",
-    subCategory: "200-500 People - Indoor",
-    price: 74999,
-    setupCharges: 8000,
-
-    deliveryCharges: 3000,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "8 hours",
-    },
-    image: [
-      `${baseUrl}/Sangeeth-setup-image-1.jpg`,
-      `${baseUrl}/Sangeeth-setup-image-2.jpg`,
-      `${baseUrl}/Sangeeth-setup-image-3.jpg`,
-      `${baseUrl}/Sangeeth-setup-image-4.jpg`,
-      `${baseUrl}/Sangeeth-setup-image-5.jpg`,
-    ],
-    description:
-      "An advanced sound and lighting solution tailored for larger indoor events accommodating 200 to 500 guests, ensuring a spectacular experience.",
-    specifications: [
-      "Double bin setup featuring 4 Subwoofers and 8 Top Speakers",
-      "Includes necessary amplifiers and mixing console",
-      "2 Speaker Monitors for optimal sound distribution",
-      "4 Microphones for clear audio capture",
-      "Truss dimensions: 20x40 ft for structural support",
-      "40-50 Par Cans for extensive lighting coverage",
-      "8-10 Sharpies for focused lighting effects",
-      "4 CO2 Smoke Jets for dramatic effects",
-      "8 Electric Sparkle Machines for visual excitement",
-      "4 Flame Machines for stunning visuals",
-      "Optional Live Band Setup for enhanced entertainment",
-      "Optional Stage with black mat for a professional look",
-      "Optional LED Screens for visual presentations",
-      "Additional items can be accommodated upon request",
-      "Service duration available for up to 6 hours",
-    ],
-    available: true,
-  },
-  {
-    id: "sound-package-4",
-    idealFor: ["Sangeeth"],
-    name: "Sound and Lighting Package 4",
-    category: "sound",
-    subCategory: "100 People - Outdoor",
-    price: 50000,
-    setupCharges: 7000,
-    deliveryCharges: 2500,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "8 hours",
-    },
-    image: [
-      "https://example.com/image/sound-package-4-1.jpg", // Replace with actual image URLs
-      "https://example.com/image/sound-package-4-2.jpg",
-    ],
-    description:
-      "Outdoor sound and lighting package for events up to 100 people.",
-    specifications: [
-      "Double Bin Setup with 4 Subs and 8 Top speakers",
-      "Required amplifier and console",
-      "2 Speaker Monitors",
-      "8 Par cans for lighting",
-      "2 Sharpies for focused lighting",
-      "Smoke machine for effects",
-      "8x8 ft LED screen for visuals",
-      "Optional Dance Floor for events",
-      "Optional Live band setup for entertainment",
-      "Additional lightings and speakers available",
-      "Service duration available for up to 6 hours",
-    ],
-    available: true,
-  },
-  {
-    id: "sound-package-5",
-    idealFor: ["Sangeeth", "Fests", "Corporate Events", "Others"],
-    name: "Grand Sound and Lighting Package for Large Outdoor Events",
-    category: "sound",
-    subCategory: "500 People - Outdoor",
-    price: 149999,
-    setupCharges: 10000,
-    deliveryCharges: 5000,
-    rentalDuration: {
-      minimum: "6 hours",
-      standard: "12 hours",
-    },
-    image: [
-      "https://example.com/image/sound-package-5-1.jpg", // Replace with actual image URLs
-      "https://example.com/image/sound-package-5-2.jpg",
-    ],
-    description:
-      "An extensive sound and lighting package tailored for large outdoor events, accommodating up to 500 guests, ensuring a spectacular experience.",
-    specifications: [
-      "Quad bin setup with 8 Subwoofers and 16 Top Speakers",
-      "High-powered amplifiers and professional mixing console",
-      "Multiple DJ options available based on genre",
-      "10 Par Cans and 4 Moving Head Lights for dynamic lighting",
-      "4 Speaker Monitors for clear sound distribution",
-      "Truss dimensions: 20x40 ft for structural support",
-      "Fog and Laser Machines for enhanced effects",
-      "Optional Stage Setup with backdrop",
-      "Optional LED Video Wall for visuals",
-      "Standard Service duration available for up to 12 hours",
-      "Additional equipment can be accommodated upon request",
-    ],
-    available: true,
-  },
-  // SOUND CATEGORY - DJ SETUPS
   {
     id: "sound-dj-1",
     idealFor: [
@@ -606,7 +495,6 @@ export const PRODUCTS: Product[] = [
       "https://myutsav.s3.ap-south-1.amazonaws.com/double-bin-sound-system-rental-500x500.webp",
 
       `${baseUrl}/DJ-double-bin-setup-image-2.jpg`,
-      `${baseUrl}/DJ-double-bin-setup-image-3.jpg`,
 
       `${baseUrl}/DJ-double-bin-setup-image-5.jpg`,
     ],
@@ -622,6 +510,108 @@ export const PRODUCTS: Product[] = [
       "Wireless microphones (2) for seamless announcements",
       "Complete cable management for a tidy setup",
       "Optional Backup equipment included for peace of mind",
+    ],
+    available: true,
+  },
+  {
+    id: "sound-package-3",
+    idealFor: ["Fests", "Sangeeth", "Reception", "Others"],
+    name: "Elite Sound and Lighting Package",
+    category: "sound",
+    subCategory: "200-500 People - Indoor",
+    price: 74999,
+    setupCharges: 8000,
+
+    deliveryCharges: 3000,
+    rentalDuration: {
+      minimum: "4 hours",
+      standard: "8 hours",
+    },
+    image: [
+      `${baseUrl}/Sangeeth-setup-image-5.jpg`,
+      `${baseUrl}/Sangeeth-setup-image-2.jpg`,
+    ],
+    description:
+      "An advanced sound and lighting solution tailored for larger indoor events accommodating 200 to 500 guests, ensuring a spectacular experience.",
+    specifications: [
+      "Double bin setup featuring 4 Subwoofers and 8 Top Speakers",
+      "Includes necessary amplifiers and mixing console",
+      "2 Speaker Monitors for optimal sound distribution",
+      "4 Microphones for clear audio capture",
+      "Truss dimensions: 20x40 ft for structural support",
+      "40-50 Par Cans for extensive lighting coverage",
+      "8-10 Sharpies for focused lighting effects",
+      "4 CO2 Smoke Jets for dramatic effects",
+      "8 Electric Sparkle Machines for visual excitement",
+      "4 Flame Machines for stunning visuals",
+      "Optional Live Band Setup for enhanced entertainment",
+      "Optional Stage with black mat for a professional look",
+      "Optional LED Screens for visual presentations",
+      "Additional items can be accommodated upon request",
+      "Service duration available for up to 6 hours",
+    ],
+    available: true,
+  },
+  {
+    id: "sound-package-4",
+    idealFor: ["Sangeeth"],
+    name: "Premium Outdoor Sound and Lighting Package",
+
+    category: "sound",
+    subCategory: "100 People - Outdoor",
+    price: 50000,
+    setupCharges: 7000,
+    deliveryCharges: 2500,
+    rentalDuration: {
+      minimum: "4 hours",
+      standard: "8 hours",
+    },
+    image: [`${baseUrl}/DJ-double-bin-setup-image-3.jpg`],
+    description:
+      "A top-tier outdoor sound and lighting solution designed for events accommodating up to 100 guests, ensuring an unforgettable audio-visual experience.",
+    specifications: [
+      "Double Bin Setup with 4 Subs and 8 Top speakers",
+      "Required amplifier and console",
+      "2 Speaker Monitors",
+      "8 Par cans for lighting",
+      "2 Sharpies for focused lighting",
+      "Smoke machine for effects",
+      "8x8 ft LED screen for visuals",
+      "Optional Dance Floor for events",
+      "Optional Live band setup for entertainment",
+      "Additional lightings and speakers available",
+      "Service duration available for up to 6 hours",
+    ],
+    available: true,
+  },
+  {
+    id: "sound-package-5",
+    idealFor: ["Sangeeth", "Fests", "Corporate Events", "Others"],
+    name: "Grand Sound and Lighting Package for Large Outdoor Events",
+    category: "sound",
+    subCategory: "500 People - Outdoor",
+    price: 149999,
+    setupCharges: 10000,
+    deliveryCharges: 5000,
+    rentalDuration: {
+      minimum: "6 hours",
+      standard: "12 hours",
+    },
+    image: [`${baseUrl}/Sangeeth-setup-image-1.jpg`],
+    description:
+      "An extensive sound and lighting package tailored for large outdoor events, accommodating up to 500 guests, ensuring a spectacular experience.",
+    specifications: [
+      "Quad bin setup with 8 Subwoofers and 16 Top Speakers",
+      "High-powered amplifiers and professional mixing console",
+      "Multiple DJ options available based on genre",
+      "10 Par Cans and 4 Moving Head Lights for dynamic lighting",
+      "4 Speaker Monitors for clear sound distribution",
+      "Truss dimensions: 20x40 ft for structural support",
+      "Fog and Laser Machines for enhanced effects",
+      "Optional Stage Setup with backdrop",
+      "Optional LED Video Wall for visuals",
+      "Standard Service duration available for up to 12 hours",
+      "Additional equipment can be accommodated upon request",
     ],
     available: true,
   },
@@ -670,13 +660,13 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
+      `${baseUrl}/Wedding-photography-image-8.jpg`,
+      `${baseUrl}/Wedding-photography-image-10.jpg`,
       `${baseUrl}/Wedding-photography-image-1.jpg`,
 
       `${baseUrl}/Wedding-photography-image-5.jpg`,
       `${baseUrl}/Wedding-photography-image-6.jpg`,
-      `${baseUrl}/Wedding-photography-image-8.jpg`,
 
-      `${baseUrl}/Wedding-photography-image-10.jpg`,
       `${baseUrl}/Wedding-photography-image-11.jpg`,
     ],
   },
@@ -768,7 +758,7 @@ export const PRODUCTS: Product[] = [
       `${baseUrl}/Pre-wedding-shoot-image-2.jpg`,
       `${baseUrl}/Pre-wedding-shoot-image-1.jpg`,
       `${baseUrl}/Pre-wedding-shoot-image-3.jpg`,
-      `${baseUrl}/Pre-wedding-photography-image-1.jpg`,
+      `${baseUrl}/Pre-wedding-photography-image-5.jpg`,
     ],
   },
   {
@@ -855,8 +845,9 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/PR-events-photography-image-3.jpg`,
+      `${baseUrl}/PR-events-photography-image-1.jpg`,
+      `${baseUrl}/PR-events-photography-image-2.jpg`,
     ],
   },
   {
@@ -885,8 +876,9 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Product-photography-image-2.jpg`,
+      `${baseUrl}/Product-photography-image-1.jpg`,
+      `${baseUrl}/Product-photography-image-3.jpg`,
     ],
   },
   // {
@@ -1273,9 +1265,9 @@ export const PRODUCTS: Product[] = [
     id: "decor-light-1",
     idealFor: ["Sangeeth", "Birthdays", "Anniversary", "Reception"],
     name: "LED Dance Floor",
-    category: "decor",
+    category: "sound",
     subCategory: "Lighting",
-    price: 25000,
+    price: 10999,
     setupCharges: 5000,
     deliveryCharges: 3000,
     rentalDuration: {
@@ -1612,7 +1604,7 @@ export const PRODUCTS: Product[] = [
     available: true,
   },
   {
-    id: "staff-security-1",
+    id: "staff-hosp-2",
     idealFor: [
       "Weddings",
       "Reception",
@@ -1622,9 +1614,9 @@ export const PRODUCTS: Product[] = [
       "Others",
     ],
     name: "Bouncers",
-    category: "support-staff",
-    subCategory: "Security",
-    price: 10000,
+    category: "hospitality",
+    subCategory: "Hospitality",
+    price: 7999,
     deliveryCharges: 1000,
     rentalDuration: {
       minimum: "6 hours",
@@ -1634,18 +1626,20 @@ export const PRODUCTS: Product[] = [
         daily: 12000,
       },
     },
-    image: [],
+    image: [
+      `${baseUrl}/Bouncers-image-5.jpeg`,
+      `${baseUrl}/Bouncers-image-2.jpeg`,
+      `${baseUrl}/Bouncers-image-1.jpeg`,
+      `${baseUrl}/Bouncers-image-3.jpeg`,
+    ],
     description: "Professional security team for event safety.",
     specifications: [
-      "4 trained security guards",
+      "4 trained bouncers",
       "1 supervisor",
       "Professional uniforms",
-      "Security equipment",
       "Crowd management trained",
       "Emergency protocols",
-      "CCTV monitoring",
-      "Parking management",
-      "VIP security available",
+      "VIP security available upon request",
     ],
     available: true,
   },

@@ -44,7 +44,7 @@ const EVENTS = [
       "Join us for a grand celebration filled with joy, love, and unforgettable moments post-wedding!",
   },
   {
-    id: "birthday",
+    id: "birthdays",
     name: "Birthday",
     image:
       "https://myutsav.s3.ap-south-1.amazonaws.com/Birthday-decor-image-2.jpg",

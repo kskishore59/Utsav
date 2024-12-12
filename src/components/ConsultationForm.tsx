@@ -72,8 +72,8 @@ export default function ConsultationForm({
             exit={{ scale: 0.95, opacity: 0 }}
             className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 m-4"
           >
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">
+            <div className="flex justify-between  items-center mb-6">
+              <h2 className="text-2xl font-semibold font-poppins text-gray-900">
                 Event Consultation
               </h2>
               <button
@@ -84,7 +84,7 @@ export default function ConsultationForm({
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 font-poppins">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Name
@@ -103,18 +103,46 @@ export default function ConsultationForm({
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Country Code
+                </label>
+                <select
+                  value="+91" // Default country code for India
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  disabled // Make this field non-editable
+                >
+                  <option value="+91">+91 (India)</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Phone
                 </label>
                 <input
                   type="tel"
                   required
+                  pattern="\d{10}" // Validation for exactly 10 digits
                   value={formData.phoneNumber}
                   onChange={(e) =>
                     setFormData({ ...formData, phoneNumber: e.target.value })
                   }
+                  onInvalid={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("phoneError")!
+                      .classList.remove("hidden");
+                  }}
+                  onInput={() => {
+                    document
+                      .getElementById("phoneError")!
+                      .classList.add("hidden");
+                  }}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   placeholder="Your phone number"
                 />
+                <p className="text-red-500 text-xs mt-1 hidden" id="phoneError">
+                  Phone number must be 10 digits.
+                </p>
               </div>
 
               <div>

@@ -1,16 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import {
-  Package,
-  Mail,
-  Phone,
-  MapPin,
   Facebook,
   Instagram,
+  Mail,
+  MapPin,
+  MessageCircleCodeIcon,
   Twitter,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const createWhatsAppLink = () => {
+    const message = encodeURIComponent(
+      `Hey there! I'm excited to learn more about your amazing products! Could you share some details with me?`
+    );
+    return `https://wa.me/916300996714?text=${message}`;
+  };
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
@@ -112,12 +116,18 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-indigo-400" />
                 <span className="text-gray-400 hover:text-indigo-400 transition-colors">
-                  support@utsav.com
+                  <a href="mailto:support@utsav.com">support@utsav.com</a>
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-indigo-400" />
-                <span className="text-gray-400">+91 8919962445</span>
+                <MessageCircleCodeIcon className="h-5 w-5 text-indigo-400" />
+                <a
+                  href={createWhatsAppLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="text-gray-400">Connect with us</span>
+                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-indigo-400" />

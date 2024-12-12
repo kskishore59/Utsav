@@ -4,7 +4,6 @@ import { LoadingScreen } from "../components/LoadingScreen";
 import { useEffect, useState } from "react";
 import FeedbackButton from "../components/FeedbackButton";
 import { baseUrl } from "../products";
-import { base } from "framer-motion/client";
 
 const CATEGORIES = [
   {
@@ -12,20 +11,19 @@ const CATEGORIES = [
     name: "Photography",
     image:
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80",
-    description: "Professional photographers and videographers",
+    description: "Professional photography and videography",
   },
   {
     id: "sound",
     name: "Sound And Visual Effects",
     image: "/sharpies-two.jpg",
-    description: "Professional audio systems and Visual effects equipment",
+    description: "Professional Sound & Visual effects equipment",
   },
   {
     id: "decor",
     name: "Decor",
-    image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80",
-    description: "Event decoration and setup",
+    image: `${baseUrl}/Reception-image-3.jpg`,
+    description: "Comprehensive event decoration and setup services",
   },
   {
     id: "lighting",
@@ -37,21 +35,19 @@ const CATEGORIES = [
   {
     id: "transportation",
     name: "Transportation",
-    image: `${baseUrl}/Wedding-car-image-1.jpg`,
+    image: "https://i.postimg.cc/hG3Fg9tG/wedding-car-one.jpg",
     description: "Luxury cars, buses, and transportation services",
   },
   {
     id: "artists",
     name: "Artists",
-    image:
-      "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80",
+    image: `${baseUrl}/Make-up-image-1.jpg`,
     description: "Make up artists, Mehendi Artists and more",
   },
   {
     id: "hospitality",
     name: "Hospitality Staff",
-    image:
-      "https://images.unsplash.com/photo-1582192764070-34c1194c0f7c?auto=format&fit=crop&q=80",
+    image: `${baseUrl}/Bouncers-image-3.jpeg`,
     description: "Welcome staff, servers, and bouncers",
   },
 ];
@@ -150,13 +146,13 @@ export default function AllCategories() {
                       src={category.image}
                       loading="lazy"
                       alt={category.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover "
                       initial={{ scale: 1.2 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.5 }}
                       aria-placeholder="blur"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 group-hover:bg-opacity-30" />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-30" />
                   </div>
 
                   <motion.div

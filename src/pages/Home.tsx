@@ -199,8 +199,7 @@ export default function Home() {
               icon={<CalendarCheck2 className="h-8 w-8" />}
               title="View All Events"
               description=""
-              image="/
-              event-two.jpeg"
+              image="/event-two.jpeg"
               link="/events"
             />
           </div>
