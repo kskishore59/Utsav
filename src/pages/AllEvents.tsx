@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { LoadingScreen } from "../components/LoadingScreen";
 import { useEffect, useState } from "react";
+import { baseUrl } from "../products";
 
 const EVENTS = [
   // Define your events here similar to CATEGORIES
@@ -53,7 +54,7 @@ const EVENTS = [
   {
     id: "anniversary",
     name: "Anniversary",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+    image: `${baseUrl}/25th Anniversary.jpg`,
     description:
       "Raise a toast to love and togetherness, cherishing every beautiful moment spent together!",
   },
@@ -68,18 +69,17 @@ const EVENTS = [
   {
     id: "house warming",
     name: "House Warming",
-    image:
-      "https://myutsav.s3.ap-south-1.amazonaws.com/House-warming-image-2.jpg",
+    image: `${baseUrl}/House-warming-image-2.jpg`,
     description:
       "Welcome warmth and joy into your new abode with a delightful housewarming party!",
   },
-  {
-    id: "private parties",
-    name: "Private Parties",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    description:
-      "Celebrate special moments with loved ones in cozy, intimate gatherings that create lasting memories!",
-  },
+  // {
+  //   id: "private parties",
+  //   name: "Private Parties",
+  //   image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   description:
+  //     "Celebrate special moments with loved ones in cozy, intimate gatherings that create lasting memories!",
+  // },
   {
     id: "others",
     name: "Others",
@@ -87,13 +87,13 @@ const EVENTS = [
     description:
       "For all those extraordinary moments that deserve a special mention, we’re here to celebrate!",
   },
-  {
-    id: "pooja",
-    name: "Pooja",
-    image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    description:
-      "Invite peace and prosperity with heartfelt prayers and religious rituals in a sacred ambiance!",
-  },
+  // {
+  //   id: "pooja",
+  //   name: "Pooja",
+  //   image: "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   description:
+  //     "Invite peace and prosperity with heartfelt prayers and religious rituals in a sacred ambiance!",
+  // },
   // Add more events as needed
 ];
 

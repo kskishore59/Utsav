@@ -3,20 +3,22 @@ import { motion } from "framer-motion";
 import { LoadingScreen } from "../components/LoadingScreen";
 import { useEffect, useState } from "react";
 import FeedbackButton from "../components/FeedbackButton";
+import { baseUrl } from "../products";
+import { base } from "framer-motion/client";
 
 const CATEGORIES = [
+  {
+    id: "photography",
+    name: "Photography",
+    image:
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80",
+    description: "Professional photographers and videographers",
+  },
   {
     id: "sound",
     name: "Sound And Visual Effects",
     image: "/sharpies-two.jpg",
     description: "Professional audio systems and Visual effects equipment",
-  },
-  {
-    id: "lighting",
-    name: "Lighting",
-    image:
-      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80",
-    description: "Event, business and Home lighting solutions",
   },
   {
     id: "decor",
@@ -26,17 +28,16 @@ const CATEGORIES = [
     description: "Event decoration and setup",
   },
   {
-    id: "photography",
-    name: "Photography",
-    image:
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80",
-    description: "Professional photographers and videographers",
+    id: "lighting",
+    name: "Lighting",
+    image: `${baseUrl}/Venue-lighting-image-1.jpg`,
+    description: "Event, business and Home lighting solutions",
   },
+
   {
     id: "transportation",
     name: "Transportation",
-    image:
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80",
+    image: `${baseUrl}/Wedding-car-image-1.jpg`,
     description: "Luxury cars, buses, and transportation services",
   },
   {
@@ -44,7 +45,7 @@ const CATEGORIES = [
     name: "Artists",
     image:
       "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80",
-    description: "Musicians, dancers, and performers",
+    description: "Make up artists, Mehendi Artists and more",
   },
   {
     id: "hospitality",

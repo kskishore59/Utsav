@@ -47,9 +47,7 @@ function ProductDetail() {
           <h1 className="text-3xl font-semibold text-gray-800 font-poppins">
             {product.name}
           </h1>
-          <h2 className="text-md font-500 text-starttext-gray-800 mt-0">
-            Unleash Your Creativity with Customization*
-          </h2>
+
           <p className="text-2xl font-semibold text-indigo-600">
             <span className="text-lg font-500 text-indigo-600">
               Starting From{" "}
@@ -164,6 +162,10 @@ function ProductDetail() {
               </div>
             </div> */}
           </div>
+
+          {/* <h2 className="text-md font-500 text-starttext-gray-800 mt-0">
+            *Unleash Your Creativity with Customization
+          </h2> */}
 
           <motion.a
             whileHover={{ scale: 1.05 }}

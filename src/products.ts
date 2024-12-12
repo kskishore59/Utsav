@@ -1,7 +1,6 @@
-import { base } from "framer-motion/client";
 import { Product } from "./types";
 
-const baseUrl = "https://myutsav.s3.ap-south-1.amazonaws.com";
+export const baseUrl = "https://myutsav.s3.ap-south-1.amazonaws.com";
 
 export const PRODUCTS: Product[] = [
   // Decor Products
@@ -63,7 +62,6 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      `${baseUrl}/Engagement-image-2.jpg`,
       `${baseUrl}/Engagement-image-1.jpg`,
       `${baseUrl}/Engagement-image-3.jpg`,
       `${baseUrl}/Reception-image-1.jpg`,
@@ -89,12 +87,17 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
+      `${baseUrl}/Haldi-image-8.jpg`,
       `${baseUrl}/Haldi-image-6.jpg`,
       `${baseUrl}/Haldi-image-1.jpg`,
       `${baseUrl}/Haldi-image-2.jpg`,
       `${baseUrl}/Haldi-image-3.jpg`,
       `${baseUrl}/Haldi-image-4.jpg`,
       `${baseUrl}/Haldi-image-5.jpg`,
+
+      `${baseUrl}/Haldi-image-9.jpg`,
+      `${baseUrl}/Haldi-image-10.jpg`,
+      `${baseUrl}/Haldi-image-11.jpg`,
     ],
     description:
       "Complete Haldi ceremony decoration with traditional elements.",
@@ -254,10 +257,7 @@ export const PRODUCTS: Product[] = [
       "Lighting decorations",
     ],
     available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
+    image: [`${baseUrl}/25th Anniversary.jpg`], // Replace with actual image URL
   },
   {
     id: "decor-sangeeth",
@@ -308,12 +308,15 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
+      `${baseUrl}/House-warming-decor-image-10.jpg`,
       `${baseUrl}/House-warming-decor-image-1.jpg`,
       `${baseUrl}/House-warming-decor-image-2.jpg`,
       `${baseUrl}/House-warming-decor-image-3.jpg`,
       `${baseUrl}/House-warming-decor-image-4.jpg`,
       `${baseUrl}/House-warming-decor-image-5.jpg`,
       `${baseUrl}/House-warming-decor-image-6.jpg`,
+      `${baseUrl}/House-warming-decor-image-7.jpg`,
+      `${baseUrl}/House-warming-decor-image-8.jpg`,
     ], // Replace with actual image URL
   },
   {
@@ -383,10 +386,7 @@ export const PRODUCTS: Product[] = [
       minimum: "4 hours",
       standard: "8 hours",
     },
-    image: [
-      "https://example.com/image/sound-package-1-1.jpg", // Replace with actual image URLs
-      "https://example.com/image/sound-package-1-2.jpg",
-    ],
+    image: [`${baseUrl}/sound-package-1-image-1.jpg`],
     description:
       "This premium sound and lighting package is designed for intimate gatherings of up to 50 guests, perfect for parties, corporate events, and small celebrations.",
     specifications: [
@@ -448,8 +448,11 @@ export const PRODUCTS: Product[] = [
       standard: "8 hours",
     },
     image: [
-      "https://example.com/image/sound-package-3-1.jpg", // Replace with actual image URLs
-      "https://example.com/image/sound-package-3-2.jpg",
+      `${baseUrl}/Sangeeth-setup-image-1.jpg`,
+      `${baseUrl}/Sangeeth-setup-image-2.jpg`,
+      `${baseUrl}/Sangeeth-setup-image-3.jpg`,
+      `${baseUrl}/Sangeeth-setup-image-4.jpg`,
+      `${baseUrl}/Sangeeth-setup-image-5.jpg`,
     ],
     description:
       "An advanced sound and lighting solution tailored for larger indoor events accommodating 200 to 500 guests, ensuring a spectacular experience.",
@@ -565,10 +568,7 @@ export const PRODUCTS: Product[] = [
         daily: 20000,
       },
     },
-    image: [
-      "https://image.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
-    ],
+    image: [`${baseUrl}/DJ-single-bin-setup-1.jpg`],
     description:
       "Elevate your event with our DJ Setup Single Bin, ideal for gatherings of up to 200 people. (Sound varies for indoor and outdoor venues.)",
     specifications: [
@@ -602,9 +602,13 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
+      `${baseUrl}/DJ-double-bin-setup-image-4.jpg`,
       "https://myutsav.s3.ap-south-1.amazonaws.com/double-bin-sound-system-rental-500x500.webp",
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+
+      `${baseUrl}/DJ-double-bin-setup-image-2.jpg`,
+      `${baseUrl}/DJ-double-bin-setup-image-3.jpg`,
+
+      `${baseUrl}/DJ-double-bin-setup-image-5.jpg`,
     ],
     description:
       "Unleash the party with our DJ Setup Double Bin, designed for large events and weddings, ensuring an electrifying experience for up to 500 guests. (Sound varies for indoor and outdoor venues.)",
@@ -666,8 +670,14 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Wedding-photography-image-1.jpg`,
+
+      `${baseUrl}/Wedding-photography-image-5.jpg`,
+      `${baseUrl}/Wedding-photography-image-6.jpg`,
+      `${baseUrl}/Wedding-photography-image-8.jpg`,
+
+      `${baseUrl}/Wedding-photography-image-10.jpg`,
+      `${baseUrl}/Wedding-photography-image-11.jpg`,
     ],
   },
   {
@@ -697,10 +707,7 @@ export const PRODUCTS: Product[] = [
       "Emotional Highlight Reel",
     ],
     available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ],
+    image: [`${baseUrl}/Wedding-photo-1.jpg`],
   },
   {
     id: "reception-elegance-package",
@@ -716,18 +723,21 @@ export const PRODUCTS: Product[] = [
       standard: "8 hours",
     },
     description:
-      "Capture the glamour and elegance of your wedding reception with sophisticated styling and emotional storytelling.",
+      "Capture the glamour and elegance of your wedding reception with sophisticated styling.",
     specifications: [
       "Glamorous Reception Moments",
-      "Sophisticated Styling",
-      "Emotional Storytelling",
       "Traditional Photography",
+      "Traditional Videography",
       "Candid Captures",
-      "30-Page Luxury Album",
+      "25-Page Luxury Album",
       "Full-Length Reception Video",
     ],
     available: true,
-    image: [`${baseUrl}/Reception-image-1.jpg`],
+    image: [
+      `${baseUrl}/Reception-photography-image-1.jpg`,
+      `${baseUrl}/Reception-photography-image-3.jpg`,
+      `${baseUrl}/Reception-photography-image-4.jpg`,
+    ],
   },
   {
     id: "pre-wedding-cinematic",
@@ -758,6 +768,7 @@ export const PRODUCTS: Product[] = [
       `${baseUrl}/Pre-wedding-shoot-image-2.jpg`,
       `${baseUrl}/Pre-wedding-shoot-image-1.jpg`,
       `${baseUrl}/Pre-wedding-shoot-image-3.jpg`,
+      `${baseUrl}/Pre-wedding-photography-image-1.jpg`,
     ],
   },
   {
@@ -785,8 +796,8 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Engagement-photography-image-2.jpg`,
+      `${baseUrl}/Engagement-ring-image-2.jpg`,
     ],
   },
   {
@@ -807,7 +818,6 @@ export const PRODUCTS: Product[] = [
     specifications: [
       "Joyful Moment Capturing",
       "Energetic Event Coverage",
-      "Emotional Storytelling",
       "Candid Birthday Shots",
       "Traditional Group Photos",
       "20-Page Album",
@@ -815,8 +825,9 @@ export const PRODUCTS: Product[] = [
     ],
     available: true,
     image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+      `${baseUrl}/Birthday-photography-image-1.jpg`,
+      `${baseUrl}/Birthday-photography-image-2.jpg`,
+      `${baseUrl}/Birthday-photography-image-3.jpg`,
     ],
   },
   {
@@ -878,35 +889,35 @@ export const PRODUCTS: Product[] = [
       "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
     ],
   },
-  {
-    id: "private-moments-collection",
-    idealFor: ["Private Parties", "Others"],
-    name: "Private Events Intimate Photography",
-    category: "photography",
-    subCategory: "Private Events",
-    price: 30000,
-    setupCharges: 2000,
-    deliveryCharges: 1500,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "6 hours",
-    },
-    description:
-      "Capture the essence of private events with intimate photography that preserves cultural ceremonies and personal milestones.",
-    specifications: [
-      "Cultural Ceremony Documentation",
-      "Emotional Moment Capturing",
-      "Personal Milestone Preservation",
-      "Traditional Ceremony Shots",
-      "Candid Family Moments",
-      "Cultural Detail Captures",
-    ],
-    available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ],
-  },
+  // {
+  //   id: "private-moments-collection",
+  //   idealFor: ["Private Parties", "Others"],
+  //   name: "Private Events Photography",
+  //   category: "photography",
+  //   subCategory: "Private Events",
+  //   price: 30000,
+  //   setupCharges: 2000,
+  //   deliveryCharges: 1500,
+  //   rentalDuration: {
+  //     minimum: "4 hours",
+  //     standard: "6 hours",
+  //   },
+  //   description:
+  //     "Capture the essence of private events with photography that preserves cultural ceremonies and personal milestones.",
+  //   specifications: [
+  //     "Cultural Ceremony Documentation",
+  //     "Emotional Moment Capturing",
+  //     "Personal Milestone Preservation",
+  //     "Traditional Ceremony Shots",
+  //     "Candid Family Moments",
+  //     "Cultural Detail Captures",
+  //   ],
+  //   available: true,
+  //   image: [
+  //     "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+  //     "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   ],
+  // },
 
   // DECOR CATEGORY - SPECIAL EFFECTS
   // {
@@ -1079,8 +1090,11 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1630779374222-d8fc71997efb?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604430456280-43f652c497aa?auto=format&fit=crop&q=80",
+      `${baseUrl}/Make-up-image-5.jpg`,
+      `${baseUrl}/Make-up-image-1.jpg`,
+      `${baseUrl}/Make-up-image-2.jpg`,
+      `${baseUrl}/Make-up-image-3.jpg`,
+      `${baseUrl}/Make-up-image-4.jpg`,
     ],
     description:
       "Transform into a vision of beauty with our Bridal Makeup Package, tailored to make your special day unforgettable.",
@@ -1118,6 +1132,8 @@ export const PRODUCTS: Product[] = [
 
       `${baseUrl}/Mehendi-image-4.jpg`,
       `${baseUrl}/Mehendi-image-1.jpg`,
+
+      `${baseUrl}/Mehendi-image-9.jpg`,
     ],
     description: "Premium bridal mehendi service with exclusive designs.",
     specifications: [
@@ -1158,8 +1174,11 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+      `${baseUrl}/Hair-styling-image-1.jpg`,
+      `${baseUrl}/Hair-styling-image-5.jpg`,
+      `${baseUrl}/Hair-styling-image-2.jpg`,
+      `${baseUrl}/Hair-styling-image-3.jpg`,
+      `${baseUrl}/Hair-styling-image-4.jpg`,
     ],
     description: "Professional hair styling service for all occasions.",
     specifications: [
@@ -1232,10 +1251,7 @@ export const PRODUCTS: Product[] = [
         daily: 25000,
       },
     },
-    image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
-    ],
+    image: [`${baseUrl}/Baggi-image-1.jpg`],
     description:
       "Traditional horse-drawn chariot with royal decoration for wedding ceremonies.",
     specifications: [
@@ -1274,6 +1290,7 @@ export const PRODUCTS: Product[] = [
       "https://i.postimg.cc/wTZjWVFV/LED-dance-floor-3.jpg",
       "https://i.postimg.cc/QMrxDd2K/led-dance-floor-1.jpg",
       "https://i.postimg.cc/qvKMW35d/LED-dance-floor-2.jpg",
+      `${baseUrl}/LED-dance-floor-image-3.jpg`,
     ],
     description:
       "Interactive LED dance floor with multiple patterns and color combinations.",
@@ -1357,8 +1374,10 @@ export const PRODUCTS: Product[] = [
       },
     },
     image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
+      `${baseUrl}/Live-band-setup-image-4.jpg`,
+      `${baseUrl}/Live-band-setup-image-1.jpg`,
+      `${baseUrl}/Live-band-setup-image-2.jpg`,
+      `${baseUrl}/Live-band-setup-image-3.jpg`,
     ],
     description:
       "A complete live band setup featuring professional sound equipment, ideal for concerts, events, and performances.",
@@ -1602,7 +1621,7 @@ export const PRODUCTS: Product[] = [
       "Corporate Events",
       "Others",
     ],
-    name: "Event Security Team",
+    name: "Bouncers",
     category: "support-staff",
     subCategory: "Security",
     price: 10000,
@@ -1615,10 +1634,7 @@ export const PRODUCTS: Product[] = [
         daily: 12000,
       },
     },
-    image: [
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80",
-    ],
+    image: [],
     description: "Professional security team for event safety.",
     specifications: [
       "4 trained security guards",
@@ -1670,70 +1686,70 @@ export const PRODUCTS: Product[] = [
       `${baseUrl}/House+Lighting+Decor+-2.jpg`,
     ], // Replace with actual image URL
   },
-  {
-    id: "lighting-festive",
-    idealFor: ["Festivals"],
-    name: "Festive Lighting",
-    category: "lighting",
-    subCategory: "Festive",
-    price: 15000,
-    setupCharges: 2000,
-    deliveryCharges: 1000,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "8 hours",
-      pricing: {
-        hourly: 4000,
-        daily: 15000,
-      },
-    },
-    description:
-      "Vibrant lighting solutions for festive occasions, enhancing the celebratory mood.",
-    specifications: [
-      "Colorful LED lights",
-      "Decorative lanterns",
-      "String lights for outdoor use",
-      "Setup for various festive themes",
-      "Professional installation included",
-    ],
-    available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
-  },
-  {
-    id: "lighting-personal-events",
-    idealFor: [],
-    name: "Personal Events Lighting",
-    category: "lighting",
-    subCategory: "Personal Events",
-    price: 18000,
-    setupCharges: 2500,
-    deliveryCharges: 1200,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "8 hours",
-      pricing: {
-        hourly: 4500,
-        daily: 18000,
-      },
-    },
-    description:
-      "Customized lighting solutions for personal events, tailored to your needs.",
-    specifications: [
-      "LED uplighting",
-      "Mood lighting options",
-      "Thematic decorations",
-      "Setup for indoor and outdoor",
-      "Professional installation included",
-    ],
-    available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
-  },
+  // {
+  //   id: "lighting-festive",
+  //   idealFor: ["Festivals"],
+  //   name: "Festive Lighting",
+  //   category: "lighting",
+  //   subCategory: "Festive",
+  //   price: 15000,
+  //   setupCharges: 2000,
+  //   deliveryCharges: 1000,
+  //   rentalDuration: {
+  //     minimum: "4 hours",
+  //     standard: "8 hours",
+  //     pricing: {
+  //       hourly: 4000,
+  //       daily: 15000,
+  //     },
+  //   },
+  //   description:
+  //     "Vibrant lighting solutions for festive occasions, enhancing the celebratory mood.",
+  //   specifications: [
+  //     "Colorful LED lights",
+  //     "Decorative lanterns",
+  //     "String lights for outdoor use",
+  //     "Setup for various festive themes",
+  //     "Professional installation included",
+  //   ],
+  //   available: true,
+  //   image: [
+  //     "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+  //     "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   ], // Replace with actual image URL
+  // },
+  // {
+  //   id: "lighting-personal-events",
+  //   idealFor: [],
+  //   name: "Personal Events Lighting",
+  //   category: "lighting",
+  //   subCategory: "Personal Events",
+  //   price: 18000,
+  //   setupCharges: 2500,
+  //   deliveryCharges: 1200,
+  //   rentalDuration: {
+  //     minimum: "4 hours",
+  //     standard: "8 hours",
+  //     pricing: {
+  //       hourly: 4500,
+  //       daily: 18000,
+  //     },
+  //   },
+  //   description:
+  //     "Customized lighting solutions for personal events, tailored to your needs.",
+  //   specifications: [
+  //     "LED uplighting",
+  //     "Mood lighting options",
+  //     "Thematic decorations",
+  //     "Setup for indoor and outdoor",
+  //     "Professional installation included",
+  //   ],
+  //   available: true,
+  //   image: [
+  //     "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+  //     "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   ], // Replace with actual image URL
+  // },
   {
     id: "lighting-event-venue",
     idealFor: ["Weddings", "Reception", "Sangeeth", "Engagement"],
@@ -1768,70 +1784,70 @@ export const PRODUCTS: Product[] = [
       `${baseUrl}/Venue-lighting-image-2.jpg`,
     ], // Replace with actual image URL
   },
-  {
-    id: "lighting-shops-businesses",
-    idealFor: ["Others"],
-    name: "Shops/Businesses Lighting",
-    category: "lighting",
-    subCategory: "Shops/Businesses",
-    price: 22000,
-    setupCharges: 3500,
-    deliveryCharges: 1500,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "8 hours",
-      pricing: {
-        hourly: 5500,
-        daily: 22000,
-      },
-    },
-    description:
-      "Professional lighting solutions for shops and businesses, enhancing visibility and appeal.",
-    specifications: [
-      "LED display lighting",
-      "Track lighting for products",
-      "Energy-efficient options",
-      "Setup for indoor and outdoor",
-      "Professional installation included",
-    ],
-    available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
-  },
-  {
-    id: "lighting-temple-pandals",
-    idealFor: ["Festivals", "Others"],
-    name: "Temple/Pandals Lighting",
-    category: "lighting",
-    subCategory: "Temple/Pandals",
-    price: 20000,
-    setupCharges: 3000,
-    deliveryCharges: 1500,
-    rentalDuration: {
-      minimum: "4 hours",
-      standard: "8 hours",
-      pricing: {
-        hourly: 5000,
-        daily: 20000,
-      },
-    },
-    description:
-      "Specialized lighting solutions for temples and pandals, creating a divine atmosphere.",
-    specifications: [
-      "Traditional decorative lights",
-      "LED lights for vibrant displays",
-      "Setup for religious events",
-      "Professional installation included",
-      "Customizable lighting themes",
-    ],
-    available: true,
-    image: [
-      "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
-      "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
-    ], // Replace with actual image URL
-  },
+  // {
+  //   id: "lighting-shops-businesses",
+  //   idealFor: ["Others"],
+  //   name: "Shops/Businesses Lighting",
+  //   category: "lighting",
+  //   subCategory: "Shops/Businesses",
+  //   price: 22000,
+  //   setupCharges: 3500,
+  //   deliveryCharges: 1500,
+  //   rentalDuration: {
+  //     minimum: "4 hours",
+  //     standard: "8 hours",
+  //     pricing: {
+  //       hourly: 5500,
+  //       daily: 22000,
+  //     },
+  //   },
+  //   description:
+  //     "Professional lighting solutions for shops and businesses, enhancing visibility and appeal.",
+  //   specifications: [
+  //     "LED display lighting",
+  //     "Track lighting for products",
+  //     "Energy-efficient options",
+  //     "Setup for indoor and outdoor",
+  //     "Professional installation included",
+  //   ],
+  //   available: true,
+  //   image: [
+  //     "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+  //     "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   ], // Replace with actual image URL
+  // },
+  // {
+  //   id: "lighting-temple-pandals",
+  //   idealFor: ["Festivals", "Others"],
+  //   name: "Temple/Pandals Lighting",
+  //   category: "lighting",
+  //   subCategory: "Temple/Pandals",
+  //   price: 20000,
+  //   setupCharges: 3000,
+  //   deliveryCharges: 1500,
+  //   rentalDuration: {
+  //     minimum: "4 hours",
+  //     standard: "8 hours",
+  //     pricing: {
+  //       hourly: 5000,
+  //       daily: 20000,
+  //     },
+  //   },
+  //   description:
+  //     "Specialized lighting solutions for temples and pandals, creating a divine atmosphere.",
+  //   specifications: [
+  //     "Traditional decorative lights",
+  //     "LED lights for vibrant displays",
+  //     "Setup for religious events",
+  //     "Professional installation included",
+  //     "Customizable lighting themes",
+  //   ],
+  //   available: true,
+  //   image: [
+  //     "https://i.postimg.cc/tJW8hwt1/Decor.jpg",
+  //     "https://i.postimg.cc/N0nnZBd9/Stage-Design.jpg",
+  //   ], // Replace with actual image URL
+  // },
 ];
 
 //Welcome to Utsav, where we redefine event planning! Our mission is to make organizing unforgettable celebrations a breeze without compromising on quality or flair. Choose from our customizable event packages that cover everything from sound & visuals to decor, photography, transportation, artists, and supporting staff. While our prices reflect the premium quality of our services, once you experience Utsav, you’ll keep coming back for more! We carefully select a limited number of trusted vendors to ensure the best service and seamless coordination. Enjoy your special moments with family and friends while we handle the rest. Your satisfaction is our top priority, and we welcome your feedback to help us grow and improve. Let's make your next event magical together!

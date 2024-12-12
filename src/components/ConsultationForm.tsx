@@ -39,7 +39,7 @@ export default function ConsultationForm({
       //   if (response.ok) {
       // Create WhatsApp link with form data
       const message = encodeURIComponent(
-        `Hi! I'm ${formData.name} and I'm interested in event planning.\n\nEvent Type: ${formData.eventType}\nQuery: ${formData.query}`
+        `Hey there! I'm ${formData.name}, and I'm super excited about planning an unforgettable event! \n\n Event Type: ${formData.eventType}\n Query: ${formData.query}\n\nLet's chat and make some magic happen! 🌟`
       );
       const whatsappUrl = `https://wa.me/916300996714?text=${message}`;
 
